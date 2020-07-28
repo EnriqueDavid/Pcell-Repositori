@@ -1,0 +1,277 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+	<template id="report_delivery_document" inherit_id="stock.report_delivery_document">
+		<xpath expr="//t[@t-set='partner']" position="before">
+			<t t-set="theme_color" t-value="o.company_id and o.company_id.theme_color" />
+			<t t-set="theme_text_color" t-value="o.company_id and o.company_id.theme_text_color" />
+			<t t-set="company_color" t-value="o.company_id and o.company_id.company_color" />
+			<t t-set="company_address_color" t-value="o.company_id and o.company_id.company_address_color" />
+			<t t-set="customer_color" t-value="o.company_id and o.company_id.customer_color" />
+			<t t-set="customer_address_color" t-value="o.company_id and o.company_id.customer_address_color" />
+			<t t-set="text_color" t-value="o.company_id and o.company_id.text_color" />
+		</xpath>
+		<xpath expr="//t[@name='partner_header']" position="replace"/>
+		
+		<xpath expr="//h2" position="replace">
+			<h2 style="text-transform: uppercase;font-size: 1.6em;font-weight: bold;" class="text-center">
+				<t t-if="o.pe_is_eguide">
+					<span>Electronic Remission Guide Sender </span><span t-field="o.pe_guide_number" />
+				</t>
+				<t t-if="not o.pe_is_eguide">
+					<span t-field="o.name"/>
+				</t>
+            </h2>
+		</xpath>
+
+		<xpath expr="/t/t/t/div/h2" position="after">
+			<div class="row">
+				<div class="col-6 text-center" t-attf-style="
+					padding-top: .5rem;
+					padding-bottom: 0.5rem;
+					background-color: #{theme_color or '#ececec'};
+					border: 1px solid rgb(255, 255, 255);
+					color: #{theme_text_color or '#000000'};">
+					<span>Dirección De Partida</span>
+				</div>
+				<div class="col-6 text-center" t-attf-style="
+					padding-top: .5rem;
+					padding-bottom: 0.5rem;
+					background-color: #{theme_color or '#ececec'};
+					border: 1px solid rgb(255, 255, 255);
+					color: #{theme_text_color or '#000000'};">
+					<span>Dirección de Llegada</span>
+				</div> 
+			</div>
+			<div class="row">
+				<div class="col-6" style="
+						padding-top: .4rem;
+						padding-bottom: .4rem;">
+					<span t-field="o.picking_type_id.warehouse_id.partner_id.street" />
+					<br />
+					<span t-field="o.picking_type_id.warehouse_id.partner_id.l10n_pe_district" />
+					-
+					<span t-field="o.picking_type_id.warehouse_id.partner_id.city_id" />
+					-
+					<span t-field="o.picking_type_id.warehouse_id.partner_id.state_id" />
+				</div>
+				<div class="col-6" style="
+						padding-top: .4rem;
+						padding-bottom: .4rem;">
+					<div t-if="o.partner_id" name="partner_header">
+						<div t-field="o.partner_id.street"/>
+						<span t-field="o.partner_id.l10n_pe_district" />
+						-
+						<span t-field="o.partner_id.city_id" />
+						-
+						<span t-field="o.partner_id.state_id" />
+					</div>
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="col-5 text-center" t-attf-style="
+					padding-top: .5rem;
+					padding-bottom: 0.5rem;
+					background-color: #{theme_color or '#ececec'};
+					border: 1px solid rgb(255, 255, 255);
+					color: #{theme_text_color or '#000000'};">
+					<span>Remitente</span>
+				</div>
+				<div class="col-5 text-center" t-attf-style="
+					padding-top: .5rem;
+					padding-bottom: 0.5rem;
+					background-color: #{theme_color or '#ececec'};
+					border: 1px solid rgb(255, 255, 255);
+					color: #{theme_text_color or '#000000'};">
+					<span>Destinatario</span>
+				</div>
+				<div class="col-2 text-center" t-attf-style="
+					padding-top: .5rem;
+					padding-bottom: 0.5rem;
+					background-color: #{theme_color or '#ececec'};
+					border: 1px solid rgb(255, 255, 255);
+					color: #{theme_text_color or '#000000'};">
+					<span>Cod. Trans.</span>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-5" style="
+					padding-top: .4rem;
+					padding-bottom: .4rem;">
+					<span t-field="o.picking_type_id.company_id" /><br/>
+					RUC: 
+					<span t-field="o.picking_type_id.company_id.vat" />
+				</div>
+				<div class="col-5" style="
+					padding-top: .4rem;
+					padding-bottom: .4rem;">
+					<div t-if="o.partner_id" name="partner_header">
+						<div t-field="o.partner_id" t-options="{&quot;widget&quot;: &quot;contact&quot;, &quot;fields&quot;: [&quot;name&quot;, &quot;phone&quot;], &quot;no_marker&quot;: True, &quot;phone_icons&quot;: True}" />
+						<p t-if="o.sudo().partner_id.vat">
+							<span t-field="o.partner_id.l10n_latam_identification_type_id" />
+							:
+							<span t-field="o.sudo().partner_id.vat" />
+						</p>
+					</div>
+				</div>
+				<div class="col-2 text-center" style="
+					padding-top: .4rem;
+					padding-bottom: .4rem;">
+					<span t-field="o.pe_transfer_code" />
+				</div>
+			</div>
+		</xpath>
+	
+		<xpath expr="//table[@name='stock_move_line_table']/thead" position="replace">
+			<thead>
+				<tr>
+					<th name="th_sm_product" t-attf-style="
+								background-color: #{theme_color or '#ececec'};
+								color: #{theme_text_color or '#000000'};">
+						<strong>Producto</strong>
+					</th>
+					<th name="th_sm_quantity" t-attf-style="
+								background-color: #{theme_color or '#ececec'};
+								color: #{theme_text_color or '#000000'};">
+						<strong>Cantidad</strong>
+					</th>
+				</tr>
+			</thead>
+		</xpath>
+			
+		<!-- DATOS DE TRANSPORTE -->
+		<xpath expr="//table[@name='stock_move_line_table']" position="after">
+			<p t-field="o.note"/>
+			<t t-if="o.pe_is_eguide">
+				<div class="row">
+					<div class="col-5 text-center" t-attf-style="
+								padding-top: .5rem;
+								padding-bottom: 0.5rem;
+								background-color: #{theme_color or '#ececec'};
+								border: 1px solid rgb(255, 255, 255);
+								color: #{theme_text_color or '#000000'};">
+						<span>Datos de Transporte</span>
+					</div>
+					<div class="col-7 text-center" t-attf-style="
+								padding-top: .5rem;
+								padding-bottom: 0.5rem;
+								background-color: #{theme_color or '#ececec'};
+								border: 1px solid rgb(255, 255, 255);
+								color: #{theme_text_color or '#000000'};">
+						<span>Resumen y Codigo QR</span>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-5">
+						<div class="row">
+							<t t-if="o.pe_transport_mode=='01'">
+								<table class="table-condensed" style="width: 100%;">
+									<tr >
+										<td>
+											<span>Name:</span>
+										</td>
+										<td>
+											<span t-field="o.pe_carrier_id"/>
+										</td>
+									</tr>
+									<tr>
+										<td>
+											<span>RUC:</span>
+										</td>
+										<td>
+											<span t-field="o.pe_carrier_id.doc_number"/>
+										</td>
+									</tr>
+								</table>	
+							</t>
+							<t t-if="o.pe_transport_mode=='02'">
+								<table class="table-condensed" style="width: 100%;">
+									<t t-foreach="o.pe_fleet_ids" t-as="fleet_id">
+										<tr>
+											<td>
+												<span>Conductor:</span>
+											</td>
+											<td colspan="3">
+												<span t-field="fleet_id.driver_id" />
+											</td>
+										</tr>
+										<tr>
+											<td>
+												<span>DNI:</span>
+											</td>
+											<td>
+												<span t-field="fleet_id.driver_id.doc_number" />
+											</td>
+											<td>
+												<span>LIC.:</span>
+											</td>
+											<td>
+												<span t-field="fleet_id.driver_id.pe_driver_license" />
+											</td>
+										</tr>
+										<tr>
+											<td>
+												<span>Vehículo:</span>
+											</td>
+											<td colspan="3">
+												<t t-if='fleet_id.fleet_id.model_id.brand_id'>
+													<span style="text-transform: uppercase;"  t-field="fleet_id.fleet_id.model_id.brand_id" />
+													-
+												</t>
+												<span t-field="fleet_id.fleet_id.model_id.name" />
+											</td>
+										</tr>
+										<tr>
+											<td>
+												<span>License Plate:</span>
+											</td>
+											<td>
+												<span t-field="fleet_id.name" />
+											</td>
+										</tr>	
+									</t>
+								</table>
+							</t>
+						</div>   
+					</div>
+					<div class="col-4">
+						<p t-if="o.pe_is_eguide">
+							<spam style="font-size: 13px;">
+								Representación impresa de la
+								<b>GUIA DE REMISIÓN ELECTÓNICA</b>
+								, para consultar el documento visita:
+								<b>
+									<span t-field="o.picking_type_id.company_id.website" />
+								</b>
+							</spam>
+							<br />
+							<strong>Resumen: </strong>
+							<br />
+							<span t-field="o.pe_digest" />
+						</p>
+					</div>
+					<div class="col-3 text-right">
+						<img t-if="o.sunat_qr_code" t-att-src="'data:image/png;base64,%s' %to_text(o.sunat_qr_code)" class="img-responsive center-block" style="width: 40mm;  height: 40mm;" />
+					</div>
+					<!-- <div class="col-xs-5" t-if="o.pe_is_eguide and o.pe_guide_number!='/'" >
+						<img t-if="o.sunat_pdf417_code" t-att-src="'data:image/png;base64,%s' % to_text(o.sunat_pdf417_code)" 
+						class="img-responsive center-block" style="width: 320px;  height: 65px;" />
+					</div> -->
+		        </div>
+			</t>
+    	</xpath>
+	</template>
+
+	<template id="report_delivery_document_inherit_sale_stock" inherit_id="stock.report_delivery_document">
+		<xpath expr="//div[@t-if='o.sudo().sale_id.client_order_ref']" position="replace"/>
+
+		<xpath expr="//div[@name='div_origin']" position="before" >
+			<div t-if="o.sudo().sale_id.client_order_ref" class="col-auto">
+				<strong>Ref. De cliente:</strong>
+				<p t-field="o.sudo().sale_id.client_order_ref" />
+			</div>
+		</xpath>
+	</template>
+
+</odoo>

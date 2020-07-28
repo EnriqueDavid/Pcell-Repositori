@@ -1,0 +1,256 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <template id="report_account_payment_document">                        
+            <t t-if="not data.get('show_invoices')">
+                <table class="table table-condensed">
+                    <thead>
+                        <tr style="background-color: rgba(0,0,0,0.3)">
+                            <th>Payment No</th>
+                            <th>State</th>
+                            <th>User</th>
+                            <th t-if="data.get('partner_type') == 'customer'">Customer</th>
+                            <th t-if="data.get('partner_type') == 'supplier'">Supplier</th>
+                            <th>Date</th>
+                            <th>Memo</th>
+                            <th>Currency</th>
+                            <th class="text-right">Difference</th>
+                            <th class="text-right">Amount</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        <t t-foreach="payment_ids" t-as="payment_id">
+                            <t t-set="payment_difference" t-value="payment_id.payment_difference"/>
+                            <t t-set="color" t-value="'#fff'"/>
+                            <t t-if="0>payment_difference">
+                                <t t-set="color" t-value="'#5cb85c'"/>
+                            </t>
+                            <t t-if="payment_difference>=0">
+                                <t t-set="color" t-value="'#ffffff'"/>
+                            </t>
+                            <tr t-att-style="'background-color: %s;' %color">
+                                <td>
+                                    <span t-field="payment_id.name"/>
+                                </td>
+                                <td>
+                                    <span t-field="payment_id.state"/>
+                                </td>
+                                <td>
+                                    <span t-field="payment_id.payment_user_id"/>
+                                </td>
+                                <td>
+                                    <span t-field="payment_id.partner_id"/>
+                                </td>
+                                <td>
+                                    <span t-field="payment_id.payment_date"/>
+                                </td>
+                                <td>
+                                    <span t-field="payment_id.communication"/>
+                                </td>
+                                <td>
+                                    <span t-field="payment_id.currency_id" />
+                                </td>
+                                <td class="text-right">
+                                    <span t-field="payment_id.payment_difference" />
+                                </td>
+                                <td class="text-right">
+                                    <span t-field="payment_id.amount" />
+                                </td>
+                            </tr>
+                        </t>
+                        <t t-set="total_values" t-value="payment_report._sum_total(payment_ids,currency_id)"/>
+                        
+                        <tr>
+                            <td colspan="7"><strong>Total</strong></td>
+                            <td class="text-right"><strong><span t-esc="total_values['payment_difference']" /></strong></td>
+                            <td class="text-right"><strong><span t-esc="total_values['amount']" /></strong></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </t>
+            <t t-if="data.get('show_invoices')">
+                <t t-foreach="payment_ids" t-as="payment_id">
+                    <table class="table table-condensed">
+                        <thead>
+                            <tr style="background-color: rgba(0,0,0,0.3)">
+                                <th>Payment No</th>
+                                <th>State</th>
+                                <th>User</th>
+                                <th t-if="data.get('partner_type') == 'customer'">Customer</th>
+                                <th t-if="data.get('partner_type') == 'supplier'">Supplier</th>
+                                <th>Date</th>
+                                <th>Memo</th>
+                                <th>Currency</th>
+                                <th class="text-right">Difference</th>
+                                <th class="text-right">Amount</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <span t-field="payment_id.name"/>
+                                </td>
+                                <td>
+                                    <span t-field="payment_id.state"/>
+                                </td>
+                                <td>
+                                    <span t-field="payment_id.payment_user_id"/>
+                                </td>
+                                <td>
+                                    <span t-field="payment_id.partner_id"/>
+                                </td>
+                                <td>
+                                    <span t-field="payment_id.payment_date"/>
+                                </td>
+                                <td>
+                                    <span t-field="payment_id.communication"/>
+                                </td>
+                                <td class="text-right">
+                                    <span t-field="payment_id.currency_id" />
+                                </td>
+                                <td class="text-right">
+                                    <span t-field="payment_id.payment_difference" />
+                                </td>
+                                <td class="text-right">
+                                    <span t-field="payment_id.amount" />
+                                </td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td colspan="9">
+                                    <table class="table table-striped">
+                                        <thead>
+                                            <tr>
+                                                <th>Number</th>
+                                                <th>Date</th>
+                                                <th>Date Due</th>
+                                                <th>User</th>
+                                                <th>Currency</th>
+                                                <th class="text-right">Residual</th>
+                                                <th class="text-right">Tax</th>
+                                                <th class="text-right">Untaxed Amount</th>
+                                                <th class="text-right">Total</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <t t-foreach="payment_id.invoice_ids" t-as="l">
+                                                <t t-set="residual" t-value="l.residual"/>
+                                                <t t-set="color" t-value="'#fff'"/>
+                                                <t t-if="0>residual">
+                                                    <t t-set="color" t-value="'#5cb85c'"/>
+                                                </t>
+                                                <t t-if="residual>=0">
+                                                    <t t-set="color" t-value="'#ffffff'"/>
+                                                </t>
+                                                
+                                                <tr t-att-style="'background-color: %s;' %color">
+                                                    <td>
+                                                        <span t-field="l.number"/>
+                                                    </td>
+                                                    <td>
+                                                        <span t-field="l.date_invoice"/>
+                                                    </td>
+                                                    <td>
+                                                        <span t-esc="l.date_due"/> %
+                                                    </td>
+                                                    <td>
+                                                        <span t-field="l.user_id"/>
+                                                    </td>
+                                                    <td>
+                                                        <span t-field="l.currency_id"/>
+                                                    </td>
+
+                                                    <td class="text-right">
+                                                        <span t-field="l.residual"/>
+                                                    </td>
+                                                    <td class="text-right">
+                                                        <span t-field="l.amount_tax"/>
+                                                    </td>
+                                                    <td class="text-right">
+                                                        <span t-field="l.amount_untaxed"/>
+                                                    </td>
+                                                    <td class="text-right">
+                                                        <span t-field="l.amount_total"/>
+                                                    </td>
+                                                </tr>
+                                            </t>
+                                                
+                                        </tbody>
+                                    </table>
+                                </td>
+                            </tr>
+                                
+                        </tbody>
+                    </table>
+                </t>
+                <br />
+
+                <t t-set="total_values" t-value="payment_report._sum_total(payment_ids,currency_id)"/>
+
+                <table class="table table-condensed">
+                    <thead>
+                        <tr style="background-color: rgba(0,0,0,0.3)">
+                            <td><strong></strong></td>
+                            <td class="text-right"><strong>Difference</strong></td>
+                            <td class="text-right"><strong>Amount</strong></td>
+                        </tr>
+                        <tr>
+                            <td><strong>Total</strong></td>
+                            <td class="text-right"><strong><span t-esc="total_values['payment_difference']" /></strong></td>
+                            <td class="text-right"><strong><span t-esc="total_values['amount']" /></strong></td>
+                        </tr>
+                    </thead>
+               </table>
+            </t>
+        </template>
+
+        <template id="report_account_payment">
+            <t t-call="web.html_container">
+                <t t-set="data_report_margin_top" t-value="12"/>
+                <t t-set="data_report_header_spacing" t-value="9"/>
+                <t t-set="data_report_dpi" t-value="110"/>
+                <t t-foreach="docs" t-as="o">
+                    <t t-call="web.internal_layout">
+                        <div class="page">
+                            <h2>Payment Report By <span t-esc="data.get('name', '')"/></h2>
+
+                            <div class="row mt32">
+
+                                <div class="col-xs-3">
+                                    <strong>Journal:</strong>
+                                    <p t-field="o.name" />
+                                </div>
+                                <div class="col-xs-3">
+                                    <strong>Start Date:</strong>
+                                    <p t-esc="data.get('start_date', '')"/>
+                                </div>
+                                <div class="col-xs-3">
+                                    <strong>End Date</strong>
+                                    <p t-esc="data.get('end_date', '')"/>
+                                </div>
+                            </div>
+                                
+                            <t t-foreach="data['currency_ids']" t-as="currency_id">
+                                <t t-if="data.get('report_by') == 'report_user'">
+                                    <t t-foreach="data['user_ids']" t-as="user_id">
+                                        <t t-set="payment_ids" t-value="data['payment_ids'].filtered(lambda payment: payment.currency_id.id == currency_id.id and payment.journal_id.id == o.id and payment.payment_user_id.id == user_id.id)"/>
+                                        <t t-call="account_payment_report.report_account_payment_document" />
+                                    </t>
+                                    
+                                </t>
+                                <t t-if="data.get('report_by') == 'report_partner'">
+                                    <t t-foreach="data['partner_ids']" t-as="partner_id">
+                                        <t t-set="payment_ids" t-value="data['payment_ids'].filtered(lambda payment: payment.currency_id.id == currency_id.id and payment.journal_id.id == o.id and payment.partner_id.id == partner_id.id)"/>
+                                        <t t-call="account_payment_report.report_account_payment_document" />
+                                    </t>
+                                </t>
+                               
+                            </t>
+                        </div>
+                    </t>
+                </t>
+            </t>
+        </template>
+    </data>
+</odoo>

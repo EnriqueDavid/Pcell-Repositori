@@ -1,0 +1,112 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* pos_journal_sequence
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 13.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-04-10 02:17+0000\n"
+"PO-Revision-Date: 2020-04-09 21:21-0500\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: \n"
+"Language: es\n"
+"X-Generator: Poedit 2.3\n"
+
+#. module: pos_journal_sequence
+#: model_terms:ir.ui.view,arch_db:pos_journal_sequence.pos_sequence_config_view_form
+msgid "Activate synchronous mode"
+msgstr "Activar modo síncrono"
+
+#. module: pos_journal_sequence
+#: model_terms:ir.ui.view,arch_db:pos_journal_sequence.pos_sequence_config_view_form
+msgid "Add anonymous customer for the invoice"
+msgstr "Agregar cliente anónimo para la factura"
+
+#. module: pos_journal_sequence
+#: model:ir.model.fields,field_description:pos_journal_sequence.field_pos_config__anonymous_id
+#: model_terms:ir.ui.view,arch_db:pos_journal_sequence.pos_sequence_config_view_form
+msgid "Anonymous Partner"
+msgstr "Partner Anónimo"
+
+#. module: pos_journal_sequence
+#: model:ir.model.fields,help:pos_journal_sequence.field_pos_config__iface_journals
+#: model_terms:ir.ui.view,arch_db:pos_journal_sequence.pos_sequence_config_view_form
+msgid "Enables the use of journals from the Point of Sale"
+msgstr "Permite el uso de diarios desde el punto de venta"
+
+#. module: pos_journal_sequence
+#: model:ir.model.fields,field_description:pos_journal_sequence.field_ir_sequence__interpolated_prefix
+msgid "Interpolated Prefix"
+msgstr ""
+
+#. module: pos_journal_sequence
+#: model:ir.model.fields,field_description:pos_journal_sequence.field_ir_sequence__interpolated_suffix
+msgid "Interpolated Suffix"
+msgstr ""
+
+#. module: pos_journal_sequence
+#: model:ir.model.fields,field_description:pos_journal_sequence.field_pos_order__date_invoice
+msgid "Invoice Date"
+msgstr "Fecha de la factura"
+
+#. module: pos_journal_sequence
+#: model:ir.model.fields,field_description:pos_journal_sequence.field_pos_config__invoice_journal_ids
+#: model_terms:ir.ui.view,arch_db:pos_journal_sequence.pos_sequence_config_view_form
+msgid "Invoice Sale Journals"
+msgstr "Diario de Venta de Facturas"
+
+#. module: pos_journal_sequence
+#: model:ir.model.fields,field_description:pos_journal_sequence.field_pos_order__number
+msgid "Number"
+msgstr "Número"
+
+#. module: pos_journal_sequence
+#: model:ir.model.fields,field_description:pos_journal_sequence.field_ir_sequence__all_number_increment
+msgid "Number Increment"
+msgstr "Incremento de número"
+
+#. module: pos_journal_sequence
+#: model:ir.model,name:pos_journal_sequence.model_pos_config
+msgid "Point of Sale Configuration"
+msgstr "Configuración de Punto de Venta"
+
+#. module: pos_journal_sequence
+#: model:ir.model,name:pos_journal_sequence.model_pos_order
+msgid "Point of Sale Orders"
+msgstr "Pedidos de Punto de Venta"
+
+#. module: pos_journal_sequence
+#: model:ir.model.fields,field_description:pos_journal_sequence.field_pos_order__invoice_journal
+msgid "Sales invoice journal"
+msgstr "Diario de Factura de Fentas"
+
+#. module: pos_journal_sequence
+#: model:ir.model,name:pos_journal_sequence.model_ir_sequence
+msgid "Sequence"
+msgstr "Secuencia"
+
+#. module: pos_journal_sequence
+#: model:ir.model.fields,field_description:pos_journal_sequence.field_pos_order__invoice_sequence_number
+msgid "Sequence of invoice numbers"
+msgstr "Secuencia de números de factura"
+
+#. module: pos_journal_sequence
+#: model_terms:ir.ui.view,arch_db:pos_journal_sequence.pos_sequence_config_view_form
+msgid "Set as synchronous"
+msgstr ""
+
+#. module: pos_journal_sequence
+#: model:ir.model.fields,field_description:pos_journal_sequence.field_pos_config__iface_journals
+#: model_terms:ir.ui.view,arch_db:pos_journal_sequence.pos_sequence_config_view_form
+msgid "Show Sale Journals"
+msgstr "Mostrar diarios de venta"
+
+#. module: pos_journal_sequence
+#: model:ir.model.fields,field_description:pos_journal_sequence.field_pos_config__is_sync
+msgid "Synchronous"
+msgstr ""

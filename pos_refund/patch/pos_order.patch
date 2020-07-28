@@ -1,0 +1,24 @@
+diff --git a/addons/point_of_sale/models/pos_order.py b/addons/point_of_sale/models/pos_order.py
+index 99e25ff8db0..df24798e3f6 100644
+--- a/addons/point_of_sale/models/pos_order.py
++++ b/addons/point_of_sale/models/pos_order.py
+@@ -896,6 +896,10 @@ class PosOrder(models.Model):
+         """Create a copy of order  for refund order"""
+         PosOrder = self.env['pos.order']
+         current_session = self.env['pos.session'].search([('state', '!=', 'closed'), ('user_id', '=', self.env.uid)], limit=1)
++        if not current_session:
++            current_session = self.env['pos.session'].search([('state', '=', 'opened'),('user_id', '=', self.env.uid)], limit=1)
++        if not current_session:
++            current_session = self.env['pos.session'].search([('state', '=', 'opened')], limit=1)
+         if not current_session:
+             raise UserError(_('To return product(s), you need to open a session that will be used to register the refund.'))
+         for order in self:
+@@ -906,6 +910,7 @@ class PosOrder(models.Model):
+                 'date_order': fields.Datetime.now(),
+                 'pos_reference': order.pos_reference,
+                 'lines': False,
++                'user_id': self.env.uid
+             })
+             for line in order.lines:
+                 clone_line = line.copy({
+

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<templates id="template" xml:space="preserve">
+
+    <t t-name="SaleInvoiceJournal">
+        <t t-if="widget.pos.config.iface_journals">
+            <t t-foreach="widget.pos.journal_ids" t-as="journal_id">
+                <div class="button js_sale_journal" t-att-data-id="journal_id.id">
+                    <i class="fa fa-file-text-o" />
+                    <t t-esc="journal_id.name" />
+                </div>
+            </t>
+        </t>
+    </t>
+
+    <t t-extend="OrderReceipt">
+        <t t-jquery="t[t-if='receipt.company.logo']" t-operation="after">
+            <div t-if="order.get_number()" class="pos-receipt-center-align" style="text-align:center">
+                <b>
+                    <t t-esc="order.get_number()" />
+                </b>
+            </div>
+        </t>
+    </t>
+
+    <t t-name="TabConnecting">
+        <div class="tab-loading text-center">
+            <span class="text-warning fa fa-spin fa-spinner fa-fw" />
+            Synchronizing journal sequence
+        </div>
+    </t>
+
+
+</templates>

@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+  <data noupdate="1">
+    <record id="tax_tag_sale_exp" model="account.account.tag">
+      <field name="name">Exportacion</field>
+      <field name="applicability">taxes</field>
+    </record>
+
+    <record id="tax_tag_sale_grat" model="account.account.tag">
+      <field name="name">Gratuito Venta</field>
+      <field name="applicability">taxes</field>
+    </record>
+
+    <record id="tax_tag_sale_exo" model="account.account.tag">
+      <field name="name">Exonerado Venta</field>
+      <field name="applicability">taxes</field>
+    </record>
+
+    <record id="tax_tag_sale_ina" model="account.account.tag">
+      <field name="name">Inafecto Venta</field>
+      <field name="applicability">taxes</field>
+    </record>
+
+    <record id="tax_tag_sale_otr" model="account.account.tag">
+      <field name="name">Otros Venta</field>
+      <field name="applicability">taxes</field>
+    </record>
+
+    <record id="tax_tag_purchase_grat" model="account.account.tag">
+      <field name="name">Gratuito Compra</field>
+      <field name="applicability">taxes</field>
+    </record>
+
+    <record id="tax_tag_purchase_exo" model="account.account.tag">
+      <field name="name">Exonerado Compra</field>
+      <field name="applicability">taxes</field>
+    </record>
+
+    <record id="tax_tag_purchase_ina" model="account.account.tag">
+      <field name="name">Inafecto Compra</field>
+      <field name="applicability">taxes</field>
+    </record>
+
+    <record id="tax_tag_purchase_otr" model="account.account.tag">
+      <field name="name">Otros Compra</field>
+      <field name="applicability">taxes</field>
+    </record>
+
+    <record id="tax_tag_purchase_icbper" model="account.account.tag">
+      <field name="name">ICBPER Compra</field>
+      <field name="applicability">taxes</field>
+    </record>
+
+    <record id="tax_tag_sale_icbper" model="account.account.tag">
+      <field name="name">ICBPER Venta</field>
+      <field name="applicability">taxes</field>
+    </record>
+
+
+    <record id="ITAX_exp" model="account.tax.template">
+      <field name="chart_template_id" ref="l10n_pe.pe_chart_template" />
+      <field name="name">Exportacion</field>
+      <field name="description">Exportacion</field>
+      <field name="amount">0</field>
+      <field name="amount_type">percent</field>
+      <field name="type_tax_use">sale</field>
+      <field name="tag_ids" eval="[(6,0,[ref('tax_tag_sale_exp')])]" />
+      <field name="tax_group_id" ref="tax_group_exp" />
+    </record>
+
+    <record id="ITAX_grat" model="account.tax.template">
+      <field name="chart_template_id" ref="l10n_pe.pe_chart_template" />
+      <field name="name">Gratuito Venta</field>
+      <field name="description">Gratuito</field>
+      <field name="amount">0</field>
+      <field name="amount_type">percent</field>
+      <field name="type_tax_use">sale</field>
+      <field name="tag_ids" eval="[(6,0,[ref('tax_tag_sale_grat')])]" />
+      <field name="tax_group_id" ref="tax_group_grat" />
+    </record>
+
+    <record id="ITAX_exo" model="account.tax.template">
+      <field name="chart_template_id" ref="l10n_pe.pe_chart_template" />
+      <field name="name">Exonerado Venta</field>
+      <field name="description">Exonerado</field>
+      <field name="amount">0</field>
+      <field name="amount_type">percent</field>
+      <field name="type_tax_use">sale</field>
+      <field name="tag_ids" eval="[(6,0,[ref('tax_tag_sale_exo')])]" />
+      <field name="tax_group_id" ref="tax_group_exo" />
+    </record>
+
+    <record id="ITAX_ina" model="account.tax.template">
+      <field name="chart_template_id" ref="l10n_pe.pe_chart_template" />
+      <field name="name">Inafecto Venta</field>
+      <field name="description">Inafecto</field>
+      <field name="amount">0</field>
+      <field name="amount_type">percent</field>
+      <field name="type_tax_use">sale</field>
+      <field name="tag_ids" eval="[(6,0,[ref('tax_tag_sale_ina')])]" />
+      <field name="tax_group_id" ref="tax_group_ina" />
+    </record>
+
+    <record id="ITAX_otr" model="account.tax.template">
+      <field name="chart_template_id" ref="l10n_pe.pe_chart_template" />
+      <field name="name">Otros Venta</field>
+      <field name="description">Otros</field>
+      <field name="amount">0</field>
+      <field name="amount_type">percent</field>
+      <field name="type_tax_use">sale</field>
+      <field name="tag_ids" eval="[(6,0,[ref('tax_tag_sale_otr')])]" />
+      <field name="tax_group_id" ref="tax_group_otr" />
+    </record>
+
+    <record id="OTAX_grat" model="account.tax.template">
+      <field name="chart_template_id" ref="l10n_pe.pe_chart_template" />
+      <field name="name">Gratuito Compra</field>
+      <field name="description">Gratuito</field>
+      <field name="amount">0</field>
+      <field name="amount_type">percent</field>
+      <field name="type_tax_use">purchase</field>
+      <field name="tag_ids" eval="[(6,0,[ref('tax_tag_purchase_grat')])]" />
+      <field name="tax_group_id" ref="tax_group_grat" />
+    </record>
+
+    <record id="OTAX_exo" model="account.tax.template">
+      <field name="chart_template_id" ref="l10n_pe.pe_chart_template" />
+      <field name="name">Exonerado Compra</field>
+      <field name="description">Exonerado</field>
+      <field name="amount">0</field>
+      <field name="amount_type">percent</field>
+      <field name="type_tax_use">purchase</field>
+      <field name="tag_ids" eval="[(6,0,[ref('tax_tag_purchase_exo')])]" />
+      <field name="tax_group_id" ref="tax_group_exo" />
+    </record>
+
+    <record id="OTAX_ina" model="account.tax.template">
+      <field name="chart_template_id" ref="l10n_pe.pe_chart_template" />
+      <field name="name">Inafecto Compra</field>
+      <field name="description">Inafecto</field>
+      <field name="amount">0</field>
+      <field name="amount_type">percent</field>
+      <field name="type_tax_use">purchase</field>
+      <field name="tag_ids" eval="[(6,0,[ref('tax_tag_purchase_ina')])]" />
+      <field name="tax_group_id" ref="tax_group_ina" />
+    </record>
+
+    <record id="OTAX_otr" model="account.tax.template">
+      <field name="chart_template_id" ref="l10n_pe.pe_chart_template" />
+      <field name="name">Otros Compra</field>
+      <field name="description">Otros</field>
+      <field name="amount">0</field>
+      <field name="amount_type">percent</field>
+      <field name="type_tax_use">purchase</field>
+      <field name="tag_ids" eval="[(6,0,[ref('tax_tag_purchase_otr')])]" />
+      <field name="tax_group_id" ref="tax_group_otr" />
+    </record>
+
+    <record id="ITAX_icbper" model="account.tax.template">
+      <field name="chart_template_id" ref="l10n_pe.pe_chart_template" />
+      <field name="name">ICBPER Venta</field>
+      <field name="description">ICBPER</field>
+      <field name="amount">0.1</field>
+      <field name="amount_type">fixed</field>
+      <field name="type_tax_use">sale</field>
+      <field name="account_id" ref="401150" />
+      <field name="refund_account_id" ref="401150" />
+      <field name="tag_ids" eval="[(6,0,[ref('tax_tag_sale_icbper')])]" />
+      <field name="tax_group_id" ref="tax_group_icbper" />
+    </record>
+
+
+    <record id="OTAX_icbper" model="account.tax.template">
+      <field name="chart_template_id" ref="l10n_pe.pe_chart_template" />
+      <field name="name">ICBPER Compra</field>
+      <field name="description">ICBPER</field>
+      <field name="amount">0.1</field>
+      <field name="amount_type">fixed</field>
+      <field name="type_tax_use">purchase</field>
+      <field name="account_id" ref="401150" />
+      <field name="refund_account_id" ref="401150" />
+      <field name="tag_ids" eval="[(6,0,[ref('tax_tag_purchase_icbper')])]" />
+      <field name="tax_group_id" ref="tax_group_icbper" />
+    </record>
+  </data>
+</odoo>

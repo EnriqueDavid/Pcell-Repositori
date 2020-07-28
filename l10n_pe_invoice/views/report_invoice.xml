@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+	<template id="report_invoice_document" inherit_id="account.report_invoice_document">
+		<xpath expr="//span[@t-field='line.price_subtotal']" position="attributes">
+			<attribute name="t-field">line.price_total</attribute>
+		</xpath>
+		<xpath expr="//span[@t-field='line.product_uom_id']" position="after">
+			<span t-esc="' %s' %(line.product_uom_id.sunat_code or 'NIU')" />
+		</xpath>
+
+	</template>
+
+</odoo>

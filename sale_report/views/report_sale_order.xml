@@ -1,0 +1,275 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+<template id="report_sale_report">
+    <t t-call="web.html_container">
+        <t t-set="data_report_margin_top" t-value="12"/>
+        <t t-set="data_report_header_spacing" t-value="9"/>
+        <t t-set="data_report_dpi" t-value="110"/>
+        <t t-foreach="docs" t-as="o">
+            <t t-call="web.internal_layout">
+                <div class="page">
+                    <h2>Sale Report By <span t-esc="data.get('name', '')"/></h2>
+
+                    <div class="row mt32">
+
+                        <div class="col-xs-3">
+                            <t t-if="data.get('report_by') == 'report_user'">
+                                <strong>Salesperson:</strong>
+                            </t>
+                            <t t-if="data.get('report_by') == 'report_partner'">
+                                <strong>Customer:</strong>
+                            </t>
+                            <t t-if="data.get('report_by') == 'report_team'">
+                                <strong>Sales Channel:</strong>
+                            </t>
+                            <p t-field="o.name" />
+                        </div>
+                        <div class="col-xs-3">
+                            <strong>Start Date:</strong>
+                            <p t-esc="data.get('start_date', '')"/>
+                        </div>
+                        <div class="col-xs-3">
+                            <strong>End Date</strong>
+                            <p t-esc="data.get('end_date', '')"/>
+                        </div>
+                    </div>
+                        
+                    <t t-foreach="data['currency_ids']" t-as="currency_id">
+                        <t t-set="sale_ids" t-value="[]"/>
+                        <t t-if="data.get('report_by') == 'report_user'">
+                            <t t-set="sale_ids" t-value="data['sale_ids'].filtered(lambda sale: sale.currency_id.id == currency_id.id and sale.user_id.id == o.id)"/>
+                        </t>
+                        <t t-if="data.get('report_by') == 'report_partner'">
+                            <t t-set="sale_ids" t-value="data['sale_ids'].filtered(lambda sale: sale.currency_id.id == currency_id.id and sale.partner_id.id == o.id)"/>
+                        </t>
+                        <t t-if="data.get('report_by') == 'report_team'">
+                            <t t-set="sale_ids" t-value="data['sale_ids'].filtered(lambda sale: sale.currency_id.id == currency_id.id and sale.team_id.id == o.id)"/>
+                        </t>
+                        <t t-if="not data.get('show_lines')">
+                            <table class="table table-condensed">
+                                <thead>
+                                    <tr style="background-color: rgba(0,0,0,0.3)">
+                                        <th>Order No</th>
+                                        <th>State</th>
+                                        <th t-if="data.get('report_by') != 'report_partner'">Customer</th>
+                                        <th t-if="data.get('report_by') != 'report_user'">Salesperson</th>
+                                        <th t-if="data.get('report_by') != 'report_team'">Sales Channel</th>
+                                        <th>Date</th>
+                                        <th>Currency</th>
+                                        <th class="text-right">Margin</th>
+                                        <th class="text-right">Non Taxable Amount</th>
+                                        <th class="text-right">Taxeable Amount</th>
+                                        <th class="text-right">Amount Total</th>
+                                    </tr>
+                                </thead>
+
+                                <tbody>
+                                    <tr t-foreach="sale_ids" t-as="sale_id">
+                                        <td>
+                                            <span t-field="sale_id.name"/>
+                                        </td>
+                                        <td>
+                                            <span t-field="sale_id.state"/>
+                                        </td>
+                                        <td t-if="data.get('report_by') != 'report_partner'">
+                                            <span t-field="sale_id.partner_id"/>
+                                        </td>
+                                        <td t-if="data.get('report_by') != 'report_user'">
+                                            <span t-field="sale_id.user_id"/>
+                                        </td>
+                                        <td t-if="data.get('report_by') != 'report_team'">
+                                            <span t-field="sale_id.team_id"/>
+                                        </td>
+                                        <td>
+                                            <span t-field="sale_id.currency_id"/>
+                                        </td>
+                                        <td>
+                                            <span t-field="sale_id.date_order"/>
+                                        </td>
+                                        <td class="text-right">
+                                            <span t-field="sale_id.margin" />
+                                        </td>
+                                        <td class="text-right">
+                                            <span t-field="sale_id.amount_untaxed" />
+                                        </td>
+                                        <td class="text-right">
+                                            <span t-field="sale_id.amount_tax" />
+                                        </td>
+                                        <td class="text-right">
+                                            <span t-field="sale_id.amount_total" />
+                                        </td>
+                                    </tr>
+                                    <t t-set="total_values" t-value="sale_report._sum_total(sale_ids,currency_id.id)"/>
+                                    
+                                    <tr>
+                                        <td colspan="6"><strong>Total</strong></td>
+                                        <td class="text-right"><strong><span t-esc="total_values['margin']" /></strong></td>
+                                        <td class="text-right"><strong><span t-esc="total_values['amount_untaxed']" /></strong></td>
+                                        <td class="text-right"><strong><span t-esc="total_values['amount_tax']" /></strong></td>
+                                        <td class="text-right"><strong><span t-esc="total_values['amount_total']" /></strong></td>
+                                    </tr>
+
+                                </tbody>
+                            </table>
+                        </t>
+                        <t t-if="data.get('show_lines')">
+                            <t t-foreach="sale_ids" t-as="sale_id">
+                                <table class="table table-condensed">
+                                    <thead>
+                                        <tr style="background-color: rgba(0,0,0,0.3)">
+                                            <th>Order No</th>
+                                            <th>State</th>
+                                            <th t-if="data.get('report_by') != 'report_partner'">Customer</th>
+                                            <th t-if="data.get('report_by') != 'report_user'">Salesperson</th>
+                                            <th t-if="data.get('report_by') != 'report_team'">Sales Channel</th>
+                                            <th>Date</th>
+                                            <th>Currency</th>
+                                            <th class="text-right">Margin</th>
+                                            <th class="text-right">Non Taxable Amount</th>
+                                            <th class="text-right">Taxeable Amount</th>
+                                            <th class="text-right">Total</th>
+                                        </tr>
+                                    </thead>
+
+                                    <tbody>
+                                        <tr>
+                                            <td>
+                                                <span t-field="sale_id.name"/>
+                                            </td>
+                                            <td>
+                                                <span t-field="sale_id.state"/>
+                                            </td>
+                                            <td t-if="data.get('report_by') != 'report_partner'">
+                                                <span t-field="sale_id.partner_id"/>
+                                            </td>
+                                            <td t-if="data.get('report_by') != 'report_user'">
+                                                <span t-field="sale_id.user_id"/>
+                                            </td>
+                                            <td t-if="data.get('report_by') != 'report_team'">
+                                                <span t-field="sale_id.team_id"/>
+                                            </td>
+                                            <td>
+                                                <span t-field="sale_id.currency_id"/>
+                                            </td>
+                                            <td>
+                                                <span t-field="sale_id.date_order"/>
+                                            </td>
+                                            <td class="text-right">
+                                                <span t-field="sale_id.margin" />
+                                            </td>
+                                            <td class="text-right">
+                                                <span t-field="sale_id.amount_untaxed" />
+                                            </td>
+                                            <td class="text-right">
+                                                <span t-field="sale_id.amount_tax" />
+                                            </td>
+                                            <td class="text-right">
+                                                <span t-field="sale_id.amount_total" />
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td colspan="9">
+                                                <table class="table table-striped">
+                                                    <thead>
+                                                        <tr>
+                                                            <th>Code</th>
+                                                            <th>Description</th>
+                                                            <th class="text-right">Margin %</th>
+                                                            <th class="text-right">Margin</th>
+                                                            <th class="text-right">Discount</th>
+                                                            <th class="text-right">Quantity</th>
+                                                            <th class="text-right">Purchase Price</th>
+                                                            <th class="text-right">Unit Price</th>
+                                                            <th class="text-right">Subtotal</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <t t-foreach="sale_id.order_line" t-as="l">
+                                                            <t t-set="margin" t-value="sale_report._get_margin(l)"/>
+                                                            <t t-set="color" t-value="'#fff'"/>
+                                                            <t t-if="10>=margin['margin']">
+                                                                <t t-set="color" t-value="'#38ce16'"/>
+                                                            </t>
+                                                            <t t-if="5>=margin['margin']">
+                                                                <t t-set="color" t-value="'#dbe83c'"/>
+                                                            </t>
+                                                            <t t-if="0>=margin['margin']">
+                                                                <t t-set="color" t-value="'#d00c0c'"/>
+                                                            </t>
+                                                            <t t-if="l.discount>=10 and margin['margin']>10">
+                                                                <t t-set="color" t-value="'#e8a63c'"/>
+                                                            </t>
+                                                            
+                                                            <tr t-att-style="'background-color: %s;' %color">
+                                                                <td>
+                                                                    <span t-field="l.product_id.default_code"/>
+                                                                </td>
+                                                                <td>
+                                                                    <span t-field="l.name"/>
+                                                                </td>
+                                                                <td class="text-right">
+                                                                    <span t-esc="margin['fmargin']"/> %
+                                                                </td>
+                                                                <td class="text-right">
+                                                                    <span t-field="l.margin"/>
+                                                                </td>
+
+                                                                <td class="text-right">
+                                                                    <span t-field="l.discount"/>
+                                                                </td>
+
+                                                                <td class="text-right">
+                                                                    <span t-field="l.product_uom_qty"/>
+                                                                </td>
+                                                                <td class="text-right">
+                                                                    <span t-field="l.purchase_price"/>
+                                                                </td>
+                                                                <td class="text-right">
+                                                                    <span t-field="l.price_unit"/>
+                                                                </td>
+                                                                <td class="text-right">
+                                                                    <span t-field="l.price_total"/>
+                                                                </td>
+                                                            </tr>
+                                                        </t>
+                                                            
+                                                    </tbody>
+                                                </table>
+                                            </td>
+                                        </tr>
+                                            
+                                    </tbody>
+                                </table>
+                            </t>
+                            <br />
+                            <t t-set="total_values" t-value="sale_report._sum_total(sale_ids,currency_id.id)"/>
+                            <table class="table table-condensed">
+                                <thead>
+                                    <tr style="background-color: rgba(0,0,0,0.3)">
+                                        <td><strong></strong></td>
+                                        <td class="text-right"><strong>Margin</strong></td>
+                                        <td class="text-right"><strong>Non Taxable Amount</strong></td>
+                                        <td class="text-right"><strong>Taxeable Amount</strong></td>
+                                        <td class="text-right"><strong>Total</strong></td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Total</strong></td>
+                                        <td class="text-right"><strong><span t-esc="total_values['margin']" /></strong></td>
+                                        <td class="text-right"><strong><span t-esc="total_values['amount_untaxed']" /></strong></td>
+                                        <td class="text-right"><strong><span t-esc="total_values['amount_tax']" /></strong></td>
+                                        <td class="text-right"><strong><span t-esc="total_values['amount_total']" /></strong></td>
+                                    </tr>
+                                </thead>
+                           </table>
+                        </t>
+                    </t>
+
+
+                        
+                </div>
+            </t>
+        </t>
+    </t>
+</template>
+</odoo>

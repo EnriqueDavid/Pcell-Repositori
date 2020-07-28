@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <data>
+        <record id="pe_related_invoice_wizard_line_tree" model="ir.ui.view">
+            <field name="name">pe.related.invoice.wizard.line.tree</field>
+            <field name="model">pe.related.invoice.wizard.line</field>
+            <field name="arch" type="xml">
+                <tree string="Related Line">
+                    <field name="name" />
+                    <field name="inv_amount_paid" />
+                    <field name="inv_amount_tax" />
+                    <field name="inv_amount_total" />
+                    <field name="quantity" />
+                    <field name="amount_unit" />
+                </tree>
+            </field>
+        </record>
+
+        <record id="pe_related_invoice_wizard_line_form" model="ir.ui.view">
+            <field name="name">pe.related.invoice.wizard.line.form</field>
+            <field name="model">pe.related.invoice.wizard.line</field>
+            <field name="arch" type="xml">
+                <form string="Invoice Line">
+                    <group>
+                        <group>
+                            <field name="partner_id" invisible="True" />
+                            <field name="invoice_id" domain="[('partner_id','=', parent.partner_id),('id','!=',parent.invoice_id),('type','=',parent.invoice_type),('state','=','open')]" options="{'no_create': True}" />
+                            <field name="name" string="Description" />
+                            <field name="account_id" groups="account.group_account_user" domain="[('company_id', '=', parent.company_id), ('internal_type', '=', 'other'), ('deprecated', '=', False)]" />
+                            <field name="inv_amount_paid" />
+                            <field name="inv_amount_untaxed" />
+                            <field name="inv_amount_tax" />
+                            <field name="inv_amount_total" />
+                        </group>
+                        <group>
+                            <field name="quantity" />
+                            <field name="uom_id" groups="product.group_uom" />
+                            <field name="amount_unit" />
+                            <field name="related_line_tax_ids" widget="many2many_tags" options="{'no_create': True}" domain="[('type_tax_use','=', {'sale':'sale','purchase':'purchase'}.get(parent.type, 'none')),('company_id', '=', parent.company_id)]" />
+                            <field name="amount_subtotal" />
+                            <field name="amount_total" />
+
+                        </group>
+                    </group>
+                </form>
+            </field>
+        </record>
+
+        <record id="pe_related_invoice_wizard_form" model="ir.ui.view">
+            <field name="name">pe.related.invoice.wizard.form</field>
+            <field name="model">pe.related.invoice.wizard</field>
+            <field name="arch" type="xml">
+                <form string="Invoice">
+                    <sheet string="Invoice">
+                        <group>
+                            <group>
+                                <field string="Customer" name="partner_id" invisible="True" />
+                                <field name="date_invoice" />
+                                <field name="name" required="True" string="Reference/Description" />
+                                <field name="journal_id" invisible="True" />
+                                <field name="type" invisible="True" />
+                                <field name="invoice_id" invisible="True" />
+                                <field name="invoice_type" invisible="True" />
+                                <field name="invoice_type_refund" invisible="True" />
+                                <field name="is_retention" invisible="True" />
+                            </group>
+                            <group>
+                                <label for="currency_id" groups="base.group_multi_currency" />
+                                <div groups="base.group_multi_currency">
+                                    <field name="currency_id" options="{'no_create': True, 'no_open': True}" class="oe_inline" />
+
+                                </div>
+                                <field name="estimated_amount" />
+                                <field name="company_id" invisible="True" />
+                            </group>
+                        </group>
+                        <notebook colspan="4">
+                            <page string="Invoice Lines">
+                                <field name="related_ids" nolabel="1" widget="one2many_list" context="{'type':invoice_type, 'journal_id':journal_id}"></field>
+                            </page>
+                        </notebook>
+                    </sheet>
+                    <footer>
+                        <button string="Create related invoices" name="create_related_invoices" type="object" class="btn-primary" />
+                        <button string="Cancel" class="btn-default" special="cancel" />
+                    </footer>
+                </form>
+            </field>
+        </record>
+
+        <record id="action_pe_related_invoice_wizard" model="ir.actions.act_window">
+            <field name="name">Invoices Related</field>
+            <field name="res_model">pe.related.invoice.wizard</field>
+            <!-- <field name="view_type">form</field> -->
+            <field name="view_mode">tree,form</field>
+            <field name="view_id" ref="pe_related_invoice_wizard_form" />
+            <field name="target">new</field>
+        </record>
+
+    </data>
+</odoo>

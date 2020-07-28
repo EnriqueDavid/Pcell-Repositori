@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <record model="ir.ui.view" id="view_pe_invoice_currency_form">
+        <field name="name">res.currency.form.pe.invoice.export</field>
+        <field name="model">res.currency</field>
+        <field name="inherit_id" ref="base.view_currency_form" />
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='name']" position="after">
+                <field name="pe_currency_code" />
+            </xpath>
+        </field>
+    </record>
+</odoo>

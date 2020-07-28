@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <report
+            id="action_report_account_payment"
+            model="account.payment"
+            string="Payment Report"
+            menu="False"
+            report_type="qweb-pdf"
+            name="account_payment_report.report_account_payment"
+            file="account_payment_report.report_account_payment"
+        />
+    </data>
+</odoo>

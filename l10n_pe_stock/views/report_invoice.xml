@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<template id="report_invoice_document" inherit_id="account.report_invoice_document">
+		<xpath expr="//span[@t-field='l.name']" position="after">
+			<t t-if="o.pe_stock_ids and l.pack_lot_ids">
+                <table style="width: 100%;">
+                    <tr t-foreach="l.pack_lot_ids" t-as="pack_lot_id">
+                        <td style="padding: 0mm; 1px;">
+                            <t t-if="l.product_id.tracking=='serial'">
+                                <span>S/N </span>
+                            </t>
+                            <t t-if="l.product_id.tracking=='lot'">
+                                <span>Lt. </span>
+                            </t>
+                            <t t-if="pack_lot_id.lot_id">
+                                <span t-field="pack_lot_id.lot_id"/>
+                            </t>
+                            <t t-if="not pack_lot_id.lot_id">
+                                <span t-field="pack_lot_id.lot_name"/>
+                            </t>
+                        </td>
+                        <td name="lot_qty" style="padding: 0mm; 1px;" t-if="pack_lot_id.product_qty">
+                            Cant. <span t-field="pack_lot_id.product_qty"/>
+                        </td>
+                        <td style="padding: 0mm; 1px;" t-if="pack_lot_id.lot_id.life_date">
+                            FV. <span t-field="pack_lot_id.lot_id.life_date" t-field-options='{"format": "dd/MM/yyyy"}'/>
+                        </td>
+                    </tr>
+                </table>
+
+            </t>
+		</xpath>
+	</template>
+
+</odoo>

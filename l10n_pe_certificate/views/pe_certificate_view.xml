@@ -1,0 +1,54 @@
+<odoo>
+  <data>
+    <!-- explicit list view definition -->
+    <record model="ir.ui.view" id="view_pe_certificate_tree">
+      <field name="name">pe.certificate.tree</field>
+      <field name="model">pe.certificate</field>
+      <field name="arch" type="xml">
+        <tree>
+          <field name="name" />
+          <field name="start_date" />
+          <field name="end_date" />
+        </tree>
+      </field>
+    </record>
+
+    <record id="view_pe_certificate_from" model="ir.ui.view">
+      <field name="name">pe.certificate.form</field>
+      <field name="model">pe.certificate</field>
+      <field name="arch" type="xml">
+        <form>
+          <header>
+            <button name="action_draft" string="Draft" states="cancel" type="object" />
+            <button name="action_done" string="Done" states="draft" type="object" />
+            <button name="action_cancel" string="Cancel" states="done" type="object" />
+            <field name="state" widget="statusbar" statusbar_visible="draft,done" />
+          </header>
+          <group>
+            <group>
+              <field name="name" />
+            </group>
+            <group>
+              <field name="start_date" />
+              <field name="end_date" />
+            </group>
+          </group>
+          <label for="key" />
+          <field name="key" />
+          <label for="crt" />
+          <field name="crt" />
+        </form>
+      </field>
+    </record>
+
+    <!-- actions opening views on models -->
+    <record model="ir.actions.act_window" id="action_pe_certificate">
+      <field name="name">Peruvian Certificate</field>
+      <field name="res_model">pe.certificate</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+
+    <!--menuitem name="Certificates" id="sunat_certificate_menu" parent="l10n_pe_sunat.sunat_configuration_menu"
+      action="action_pe_sunat_certificate" sequence="4" groups="l10n_pe_sunat.group_pe_sunat_manager" /-->
+  </data>
+</odoo>

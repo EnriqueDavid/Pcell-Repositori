@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<record model="ir.ui.view" id="view_account_concar_form">
+        <field name="name">account.account.form.inherit.move.target</field>
+        <field name="model">account.account</field>
+        <field name="inherit_id" ref="account.view_account_form"/>
+        <field name="arch" type="xml">
+            <field name="deprecated" position="after">
+            	<field name="is_target"/>
+                <field name="target_ids" attrs="{'invisible': [('is_target', '=', False)]}">
+               		<tree editable="bottom" string="Account Target">
+                      	<field name="debit_account_id"/>
+						<field name="credit_account_id"/>
+						<field name="target_journal_id"/>
+					</tree>
+				</field>
+            </field>
+        </field>
+    </record>
+</odoo>
