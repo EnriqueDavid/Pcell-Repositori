@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates id="template" xml:space="preserve">
+    <t t-extend="OrderReceipt">
+    
+    
+         <t t-jquery='t[t-if="receipt.company.vat"]' t-operation="replace">
+            <t t-if='receipt.company.vat'>
+                <div>RUC:<t t-esc='receipt.company.vat' /></div>
+            </t>
+            <t t-if='receipt.company.street'>
+                <div>Street: <t t-esc="receipt.company.street"/></div>
+            </t>
+        </t>
+	    
+	    <t t-jquery='t[t-if="receipt.header_html"]' t-operation="before">
+	    	<div class="receipt-partner" t-if="order.get('client')">
+	    		<br />
+	    		<t t-esc="order.get('client').name"/><br />
+	            <t t-if="order.get('client').vat">
+	                RUT: <t t-esc="order.get('client').vat"/><br />
+	            </t>
+	            <t t-if="order.get('client').street">
+	                Street: <t t-esc="order.get('client').street"/><br />
+	            </t>
+	            
+	        </div>
+	    </t>
+    </t>
+</templates>

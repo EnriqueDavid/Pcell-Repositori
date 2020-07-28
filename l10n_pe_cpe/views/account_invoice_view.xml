@@ -1,0 +1,154 @@
+<odoo>
+    <data>
+        <record id="invoice_view_form" model="ir.ui.view">
+            <field name="name">account_move_peruvian_inherit_form</field>
+            <field name="model">account.move</field>
+            <field name="inherit_id" ref="account.view_move_form" />
+            <field name="arch" type="xml">
+                <xpath expr="//widget[@name='web_ribbon']" position="after">
+                    <widget name="web_ribbon" title="Anulado" bg_color="bg-danger" attrs="{'invisible' : [('state', 'not in', ('annul'))]}" />
+                </xpath>
+                <xpath expr="//field[@name='partner_id']" position="attributes">
+                    <attribute name="context">{'search_default_customer':1, 'show_address': 1, 'default_company_type': 'company','force_pe_journal':True}</attribute>
+                </xpath>
+                <xpath expr="//button[@name='button_draft']" position="replace">
+                    <button name="button_draft" string="Reset to Draft" type="object" groups="base.group_no_one" attrs="{'invisible' : ['|', ('restrict_mode_hash_table', '=', True), ('state', 'not in', ('posted', 'cancel','annul'))]}" />
+                </xpath>
+                <xpath expr="//sheet/div[2]" position="replace">
+                    <div>
+                        <group>
+                            <group>
+                                <div>
+                                    <!-- Invoice draft header -->
+                                    <span class="o_form_label">
+                                        <field name="type" attrs="{'invisible': ['|', ('type', '=', 'entry'), ('state', '=', 'draft')]}" readonly="1" nolabel="1" />
+                                    </span>
+                                    <h1>
+                                        <span attrs="{'invisible': ['|', '|', ('type', '!=', 'out_invoice'), ('state', '!=', 'draft'), ('name', '!=', '/')]}">Draft Invoice</span>
+                                        <span attrs="{'invisible': ['|', '|', ('type', '!=', 'out_refund'), ('state', '!=', 'draft'), ('name', '!=', '/')]}">Draft Credit Note</span>
+                                        <span attrs="{'invisible': ['|', '|', ('type', '!=', 'in_invoice'), ('state', '!=', 'draft'), ('name', '!=', '/')]}">Draft Bill</span>
+                                        <span attrs="{'invisible': ['|', '|', ('type', '!=', 'in_refund'), ('state', '!=', 'draft'), ('name', '!=', '/')]}">Draft Refund</span>
+                                        <span attrs="{'invisible': ['|', '|', ('type', '!=', 'out_receipt'), ('state', '!=', 'draft'), ('name', '!=', '/')]}">Draft Sales Receipt</span>
+                                        <span attrs="{'invisible': ['|', '|', ('type', '!=', 'in_receipt'), ('state', '!=', 'draft'), ('name', '!=', '/')]}">Draft Purchase Receipt</span>
+                                    </h1>
+
+                                    <!-- Select next number header (only invoices) -->
+                                    <span class="o_form_label" attrs="{'invisible': [('invoice_sequence_number_next_prefix', '=', False)]}">First Number:</span>
+
+                                    <!-- Number -->
+                                    <h1 class="mt0">
+                                        <field name="name" readonly="True" attrs="{'invisible':[('name', '=', '/')]}" />
+                                    </h1>
+
+                                    <!-- Select next number header (only invoices) -->
+                                    <div attrs="{'invisible': [('invoice_sequence_number_next_prefix', '=', False)]}">
+                                        <field name="invoice_sequence_number_next_prefix" class="oe_inline" />
+                                        <field name="invoice_sequence_number_next" class="oe_inline" />
+                                    </div>
+                                </div>
+                            </group>
+                            <group>
+                                <div>
+                                    <field name="sunat_qr_code" class="o_field_image oe_avatar" widget="image" width="75" height="75" attrs="{'invisible': [('state', 'in', ['draft','cancel'])]}" />
+                                </div>
+                            </group>
+                        </group>
+                    </div>
+                </xpath>
+                <xpath expr="//field[@name='partner_id']" position="after">
+                    <field name="pe_sunat_transaction" attrs="{'invisible':True}" />
+                    <field name="pe_sunat_transaction51" attrs="{'invisible':[('is_cpe','=',False)]}" />
+
+                    <field name="pe_response" attrs="{'invisible':[('is_cpe','=',False),('state', 'not in', ('draft'))]}" />
+                    <field name="pe_license_plate" groups="l10n_pe_cpe.group_plate_invoice" />
+                </xpath>
+                <!-- xpath expr="//field[@name='comment']" position="before">
+              <div>
+                   <label for="discount_type" string="Discount Type :" 
+                    groups="l10n_pe_cpe.group_pe_cpe_manager"/>
+                   <field name="discount_type" class="oe_inline" 
+                    groups="l10n_pe_cpe.group_pe_cpe_manager" />
+               </div>
+               <div>
+                   <label for="discount_rate" string="Discount Amount :" attrs="{'invisible': [('discount_type', 'not in', ['amount', ''])]}" 
+                    groups="l10n_pe_cpe.group_pe_cpe_manager" />
+                   <field name="amount_rate" class="oe_inline" attrs="{'invisible': [('discount_type', 'not in', ['amount', ''])]}" 
+                    groups="l10n_pe_cpe.group_pe_cpe_manager" />
+                 <label for="discount_rate" string="Discount Rate :" attrs="{'invisible': [('discount_type', 'not in', ['percent', ''])]}" 
+                  groups="l10n_pe_cpe.group_pe_cpe_manager" />
+                 <field name="discount_rate" class="oe_inline" attrs="{'invisible': [('discount_type', 'not in', ['percent', ''])]}" 
+                  groups="l10n_pe_cpe.group_pe_cpe_manager"/>
+               </div>
+          </xpath -->
+                <xpath expr="//field[@name='invoice_line_ids']//field[@name='discount']" position="after">
+                    <field name="pe_license_plate" groups="l10n_pe_cpe.group_plate_invoice_line" />
+                    <field name="pe_affectation_code" groups="l10n_pe_cpe.group_pe_cpe_user" force_save="1" required="1" />
+                </xpath>
+                <xpath expr="//field[@name='line_ids']//field[@name='discount']" position="after">
+                    <field name="pe_license_plate" groups="l10n_pe_cpe.group_plate_invoice_line" />
+                    <field name="pe_affectation_code" groups="l10n_pe_cpe.group_pe_cpe_user" force_save="1" invisible="1" />
+                </xpath>
+                <xpath expr="//page[@name='other_info']" position="after">
+                    <page string="Peruvian Customization" name="peruvian_customization" attrs="{'invisible':[('is_cpe','=',False)]}">
+                        <group>
+                            <group>
+                                <field name="pe_cpe_id" attrs="{'readonly':[('state', 'not in', 'draft')]}" groups="l10n_pe_cpe.group_pe_cpe_user" />
+                                <field name="pe_summary_id" attrs="{'invisible':[('pe_invoice_code','not in',('03','07','08')),('origin_doc_code','not in',('01'))]}" readonly="True" groups="l10n_pe_cpe.group_pe_cpe_user" />
+                                <field name="pe_voided_id" readonly="True" attrs="{'invisible':[('state','not in',('annul'))]}" />
+                                <field name="pe_debit_note_code" attrs="{'invisible':[('pe_invoice_code','not in',('08'))], 'required':[('pe_invoice_code','=','08')]}" />
+                                <field name="pe_credit_note_code" attrs="{'invisible':[('pe_invoice_code','not in',('07'))],'required':[('pe_invoice_code','=','07')]}" />
+                                <field name="is_cpe" attrs="{'invisible':1}" />
+                                <field name="pe_invoice_state" attrs="{'invisible':1}" />
+                                <field name="internal_number" />
+                            </group>
+                            <group>
+                                <field name="pe_additional_type" />
+                                <field name="pe_additional_number" attrs="{'invisible':[('pe_additional_type','not in',['04','05', '99', '01', '02', '03'])], 'required':[('pe_additional_type','in',['04','05', '99', '01', '02', '03'])]}" />
+                                <field name="pe_error_code" />
+                                <field name="origin_doc_code" attrs="{'invisible':[('pe_invoice_code','not in',['07','08'])], 'required':[('pe_invoice_code','in',['07','08'])]}" />
+                                <field name="origin_doc_number" attrs="{'invisible':[('pe_invoice_code','not in',['07','08'])], 'required':[('pe_invoice_code','in',['07','08'])]}" />
+                                <field name="pe_invoice_code" attrs="{'invisible':1}" />
+
+                            </group>
+                        </group>
+                        <div>
+                            <label for="pe_digest" string="Digest value:" />
+                            <field name="pe_digest" />
+                        </div>
+                        <div>
+                            <label for="pe_signature" string="Signature value:" />
+                        </div>
+                        <div>
+                            <field name="pe_signature" />
+                        </div>
+                        <field name="pe_additional_total_ids" attrs="{'readonly':[('pe_invoice_state', 'in', ['send','verify','done'])]}">
+                            <tree editable="bottom" string="Additional Monetary Total">
+                                <field name="code" />
+                                <field name="total_amount" />
+                            </tree>
+                        </field>
+                        <field name="pe_additional_property_ids" attrs="{'readonly':[('pe_invoice_state', 'in', ['send','verify','done'])]}">
+                            <tree editable="bottom" string="Additional Property">
+                                <field name="code" />
+                                <field name="value" />
+                            </tree>
+                        </field>
+                    </page>
+                </xpath>
+            </field>
+        </record>
+
+
+        <!-- <record id="invoice_supplier_cpe_form" model="ir.ui.view">
+       <field name="name">account.move.supplier.inherit.l10n.pe.cpe</field>
+       <field name="model">account.move</field>
+       <field name="inherit_id" ref="account.view_move_form"/>
+       <field name="arch" type="xml">
+            <xpath expr="//field[@name='discount']" position="after">
+              <field name="pe_affectation_code" invisible="True" />
+           </xpath>
+       </field>
+   </record> -->
+
+    </data>
+</odoo>

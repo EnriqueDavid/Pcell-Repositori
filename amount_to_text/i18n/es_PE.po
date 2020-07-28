@@ -1,0 +1,53 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* amount_to_text
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 13.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-04-10 06:19+0000\n"
+"PO-Revision-Date: 2020-04-10 01:21-0500\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Language: es_PE\n"
+"X-Generator: Poedit 2.3\n"
+
+#. module: amount_to_text
+#: model:ir.model.fields,field_description:amount_to_text.field_account_move__amount_text
+msgid "Amount Text"
+msgstr "Monto en letras"
+
+#. module: amount_to_text
+#: model:ir.model,name:amount_to_text.model_res_currency
+msgid "Currency"
+msgstr "Moneda"
+
+#. module: amount_to_text
+#: model:ir.model.fields,field_description:amount_to_text.field_res_currency__fraction_name
+msgid "Faction Name"
+msgstr "Nombre de facción"
+
+#. module: amount_to_text
+#: model:ir.model,name:amount_to_text.model_account_move
+msgid "Journal Entries"
+msgstr "Asientos contables"
+
+#. module: amount_to_text
+#: model:ir.model.fields,field_description:amount_to_text.field_res_currency__plural_name
+msgid "Plural Name"
+msgstr "Nombre plural"
+
+#. module: amount_to_text
+#: model:ir.model.fields,field_description:amount_to_text.field_res_currency__show_fraction
+msgid "Show Fraction"
+msgstr "Mostrar fracción"
+
+#. module: amount_to_text
+#: model:ir.model.fields,field_description:amount_to_text.field_res_currency__singular_name
+msgid "Singular Name"
+msgstr "Nombre singular"

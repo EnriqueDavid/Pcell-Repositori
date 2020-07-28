@@ -1,0 +1,70 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* account_annul
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-04-10 01:24+0000\n"
+"PO-Revision-Date: 2020-04-09 20:25-0500\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Language: es_PE\n"
+"X-Generator: Poedit 2.3\n"
+
+#. module: account_annul
+#: model:ir.model.fields,help:account_annul.field_account_move__state
+msgid ""
+" * The 'Draft' status is used when a user is encoding a new and unconfirmed Invoice.\n"
+" * The 'Pro-forma' status is used when the invoice does not have an invoice number.\n"
+" * The 'Open' status is used when user creates invoice, an invoice number is generated. It stays in the open status till the user pays the invoice.\n"
+" * The 'Paid' status is set automatically when the invoice is paid. Its related journal entries may or may not be reconciled.\n"
+" * The 'Anulled' status is used when user annul invoice (keeping the invoice number).\n"
+" * The 'Cancelled' status is used when user cancel invoice."
+msgstr ""
+
+#. module: account_annul
+#: model:ir.model,name:account_annul.model_account_invoice_report
+msgid "Accoun Invoice report"
+msgstr ""
+
+#. module: account_annul
+#: model_terms:ir.ui.view,arch_db:account_annul.view_move_form
+msgid "Annul Invoice"
+msgstr "Anular CPE"
+
+#. module: account_annul
+#: model:ir.model.fields,field_description:account_annul.field_account_move__annul
+msgid "Annulled"
+msgstr "Anulado"
+
+#. module: account_annul
+#: model:ir.model.fields.selection,name:account_annul.selection__account_invoice_report__state__annul
+#: model:ir.model.fields.selection,name:account_annul.selection__account_move__state__annul
+msgid "Anulled"
+msgstr "Anulado"
+
+#. module: account_annul
+#: model_terms:ir.ui.view,arch_db:account_annul.view_move_form
+msgid "Are you sure you want to anull this invoice in the Sunat?"
+msgstr "¿Estás seguro de que deseas Anular este comprobante en Sunat?"
+
+#. module: account_annul
+#: model:ir.model.fields,field_description:account_annul.field_account_invoice_report__state
+msgid "Invoice Status"
+msgstr "Estado factura"
+
+#. module: account_annul
+#: model:ir.model,name:account_annul.model_account_move
+msgid "Journal Entries"
+msgstr "Asientos contables"
+
+#. module: account_annul
+#: model:ir.model.fields,field_description:account_annul.field_account_move__state
+msgid "Status"
+msgstr "Estado"

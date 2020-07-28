@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <template id="assets_backend" name="sistemerp_ereport_template assets" inherit_id="web.assets_backend">
+            <xpath expr="." position="inside">
+                <link rel="stylesheet" href="/sistemerp_ereport_template/static/src/css/colpick.css"/>
+                <link rel="stylesheet" href="/sistemerp_ereport_template/static/src/css/widget.css"/>
+                <script type="text/javascript" src="/sistemerp_ereport_template/static/lib/colpick/colpick.js"></script>
+                <script type="text/javascript" src="/sistemerp_ereport_template/static/src/js/widget.js"></script>
+            </xpath>
+        </template>
+    </data>
+</odoo>

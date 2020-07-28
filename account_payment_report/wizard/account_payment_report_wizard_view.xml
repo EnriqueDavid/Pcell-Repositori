@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="account_payment_report_wizard" model="ir.ui.view">
+        <field name="name">Payment Report</field>
+        <field name="model">account.payment.report.wizard</field>
+        <field name="arch" type="xml">
+            <form>
+                <group name="main_info">
+                    <field name="company_id" options="{'no_create': True}" groups="base.group_multi_company"/>
+                </group>
+                <group name="filters">
+                    <group name="date_range">
+                        <field name="start_date"/>
+                        <field name="end_date"/>
+                        <field name="partner_type"  widget="radio"/>
+                        <field name="show_invoices"/>
+                    </group>
+                    <group name="other_filters">
+                        <field name="report_by" widget="radio" />
+                        <field name="journal_ids" widget="many2many_tags" options="{'no_create': True}" />
+                        <field name="partner_ids" widget="many2many_tags" attrs="{'invisible':[('report_by','!=','report_partner')]}" options="{'no_create': True}" />
+                        <field name="user_ids" widget="many2many_tags" attrs="{'invisible':[('report_by','!=','report_user')]}" options="{'no_create': True}" />
+                    </group>
+
+                </group>
+                <label for="state"/>
+                <field name="state" nolabel="1" />
+                <footer>
+                    <button name="button_export_pdf" string="Export PDF" type="object"/>
+                    or
+                    <button string="Cancel" class="oe_link" special="cancel" />
+                </footer>
+            </form>
+        </field>
+    </record>
+
+    <act_window id="action_account_payment_report_wizard"
+                name="Payment Report"
+                res_model="account.payment.report.wizard"
+                view_type="form"
+                view_mode="form"
+                view_id="account_payment_report_wizard"
+                target="new" />
+
+    <menuitem name="Payment Report" id="account_payment_report_wizard_menu" parent="account.account_reports_management_menu"
+      action="account_payment_report.action_account_payment_report_wizard" sequence="10" />
+
+</odoo>

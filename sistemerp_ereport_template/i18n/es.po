@@ -1,0 +1,1305 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* sistemerp_ereport_template
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 12.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-12-12 09:29+0000\n"
+"PO-Revision-Date: 2018-12-12 09:29+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: sistemerp_ereport_template
+#: model_terms:ir.ui.view,arch_db:sistemerp_ereport_template.report_invoice_layouted
+msgid "&amp;bull;"
+msgstr ""
+
+#. module: sistemerp_ereport_template
+#: model_terms:ir.ui.view,arch_db:sistemerp_ereport_template.invoice_subtotal_tem
+msgid "&amp;nbsp;<span>on</span>"
+msgstr "&amp;nbsp;<span>en</span>"
+
+#. module: sistemerp_ereport_template
+#: model_terms:ir.ui.view,arch_db:sistemerp_ereport_template.view_report_company_invoice_template
+msgid "(Reload Fonts)"
+msgstr "(recarga fuentes)"
+
+#. module: sistemerp_ereport_template
+#: model_terms:ir.ui.view,arch_db:sistemerp_ereport_template.report_invoice_notes
+msgid "<b>Comment: </b>"
+msgstr "<b>Comentario: </b>"
+
+#. module: sistemerp_ereport_template
+#: model_terms:ir.ui.view,arch_db:sistemerp_ereport_template.report_invoice_advanced_main
+#: model_terms:ir.ui.view,arch_db:sistemerp_ereport_template.report_invoice_creative_main
+#: model_terms:ir.ui.view,arch_db:sistemerp_ereport_template.report_invoice_incredible_main
+#: model_terms:ir.ui.view,arch_db:sistemerp_ereport_template.report_invoice_innovative_main
+msgid "<b>Description:</b>"
+msgstr "<b>Descripción:</b>"
+
+#. module: sistemerp_ereport_template
+#: model_terms:ir.ui.view,arch_db:sistemerp_ereport_template.report_invoice_exclusive_main
+msgid "<b>Description:</b>\n"
+"                                            <br/>"
+msgstr ""
+
+#. module: sistemerp_ereport_template
+#: model_terms:ir.ui.view,arch_db:sistemerp_ereport_template.report_invoice_elegant_main
+#: model_terms:ir.ui.view,arch_db:sistemerp_ereport_template.report_invoice_professional_main
+msgid "<b>Description:</b>\n"
+"                                        <br/>"
+msgstr ""
+
+#. module: sistemerp_ereport_template
+#: model_terms:ir.ui.view,arch_db:sistemerp_ereport_template.report_invoice_advanced_main
+#: model_terms:ir.ui.view,arch_db:sistemerp_ereport_template.report_invoice_creative_main
+#: model_terms:ir.ui.view,arch_db:sistemerp_ereport_template.report_invoice_incredible_main
+#: model_terms:ir.ui.view,arch_db:sistemerp_ereport_template.report_invoice_innovative_main
+msgid "<b>Due Date:</b>"
+msgstr "<b>Fecha de vencimiento:</b>"
+
+#. module: sistemerp_ereport_template
+#: model_terms:ir.ui.view,arch_db:sistemerp_ereport_template.report_invoice_exclusive_main
+msgid "<b>Due Date:</b>\n"
+"                                            <br/>"
+msgstr ""
+
+#. module: sistemerp_ereport_template
+#: model_terms:ir.ui.view,arch_db:sistemerp_ereport_template.report_invoice_elegant_main
+#: model_terms:ir.ui.view,arch_db:sistemerp_ereport_template.report_invoice_professional_main
+msgid "<b>Due Date:</b>\n"
+"                                        <br/>"
+msgstr ""
+
+#. module: sistemerp_ereport_template
+#: model_terms:ir.ui.view,arch_db:sistemerp_ereport_template.report_invoice_notes
+msgid "<b>Fiscal Position Remark: </b>"
+msgstr "<b>Observación de la posición fiscal: </b>"
+
+#. module: sistemerp_ereport_template
+#: model_terms:ir.ui.view,arch_db:sistemerp_ereport_template.report_invoice_advanced_main
+#: model_terms:ir.ui.view,arch_db:sistemerp_ereport_template.report_invoice_creative_main
+#: model_terms:ir.ui.view,arch_db:sistemerp_ereport_template.report_invoice_incredible_main
+#: model_terms:ir.ui.view,arch_db:sistemerp_ereport_template.report_invoice_innovative_main
+msgid "<b>Invoice Date:</b>"
+msgstr "<b>Fecha de la factura:</b>"
+
+#. module: sistemerp_ereport_template
+#: model_terms:ir.ui.view,arch_db:sistemerp_ereport_template.report_invoice_exclusive_main
+msgid "<b>Invoice Date:</b>\n"
+"                                            <br/>"
+msgstr ""
+
+#. module: sistemerp_ereport_template
+#: model_terms:ir.ui.view,arch_db:sistemerp_ereport_template.report_invoice_elegant_main
+#: model_terms:ir.ui.view,arch_db:sistemerp_ereport_template.report_invoice_professional_main
+msgid "<b>Invoice Date:</b>\n"
+"                                        <br/>"
+msgstr ""
+
+#. module: sistemerp_ereport_template
+#: model_terms:ir.ui.view,arch_db:sistemerp_ereport_template.report_invoice_advanced_main
+#: model_terms:ir.ui.view,arch_db:sistemerp_ereport_template.report_invoice_creative_main
+#: model_terms:ir.ui.view,arch_db:sistemerp_ereport_template.report_invoice_incredible_main
+#: model_terms:ir.ui.view,arch_db:sistemerp_ereport_template.report_invoice_innovative_main
+msgid "<b>Order Date:</b>"
+msgstr "<b>Fecha de orden:</b>"
+
+#. module: sistemerp_ereport_template
+#: model_terms:ir.ui.view,arch_db:sistemerp_ereport_template.report_invoice_exclusive_main
+msgid "<b>Order Date:</b>\n"
+"                                            <br/>"
+msgstr ""
+
+#. module: sistemerp_ereport_template
+#: model_terms:ir.ui.view,arch_db:sistemerp_ereport_template.report_invoice_elegant_main
+#: model_terms:ir.ui.view,arch_db:sistemerp_ereport_template.report_invoice_professional_main
+msgid "<b>Order Date:</b>\n"
+"                                        <br/>"
+msgstr ""
+
+#. module: sistemerp_ereport_template
+#: model_terms:ir.ui.view,arch_db:sistemerp_ereport_template.report_invoice_notes
+msgid "<b>Payment Terms Description: </b>"
+msgstr "<b>Término de pago Descripción: </b>"
+
+#. module: sistemerp_ereport_template
+#: model_terms:ir.ui.view,arch_db:sistemerp_ereport_template.report_invoice_notes
+msgid "<b>Payment Terms: </b>"
+msgstr "<b>Plazo de pago: </b>"
+
+#. module: sistemerp_ereport_template
+#: model_terms:ir.ui.view,arch_db:sistemerp_ereport_template.report_invoice_template_main
+msgid "<span class=\"text-left\">Description:</span>"
+msgstr "<span class=\"text-left\">Descripción:</span>"
+
+#. module: sistemerp_ereport_template
+#: model_terms:ir.ui.view,arch_db:sistemerp_ereport_template.report_invoice_template_main
+msgid "<span class=\"text-left\">Due Date:</span>"
+msgstr "<span class=\"text-left\">Fecha de vencimiento:</span>"
+
+#. module: sistemerp_ereport_template
+#: model_terms:ir.ui.view,arch_db:sistemerp_ereport_template.report_invoice_template_main
+msgid "<span class=\"text-left\">Invoice Date:</span>"
+msgstr "<span class=\"text-left\">Fecha de la factura:</span>"
+
+#. module: sistemerp_ereport_template
+#: model_terms:ir.ui.view,arch_db:sistemerp_ereport_template.report_invoice_template_main
+msgid "<span class=\"text-left\">Order Date:</span>"
+msgstr "<span class=\"text-left\">Fecha de orden:</span>"
+
+#. module: sistemerp_ereport_template
+#: model_terms:ir.ui.view,arch_db:sistemerp_ereport_template.view_report_company_invoice_template
+msgid "<span>Report Extra Content</span>"
+msgstr "<span>Informar contenido extra</span>"
+
+#. module: sistemerp_ereport_template
+#: model_terms:ir.ui.view,arch_db:sistemerp_ereport_template.templates_company_details
+msgid "<strong>Bank: </strong>"
+msgstr "<strong>Banco: </strong>"
+
+#. module: sistemerp_ereport_template
+#: model_terms:ir.ui.view,arch_db:sistemerp_ereport_template.invoice_templates_customer_details
+#: model_terms:ir.ui.view,arch_db:sistemerp_ereport_template.templates_company_details
+msgid "<strong>Email: </strong>"
+msgstr "<strong>Correo electrónico: </strong>"
+
+#. module: sistemerp_ereport_template
+#: model_terms:ir.ui.view,arch_db:sistemerp_ereport_template.invoice_templates_customer_details
+#: model_terms:ir.ui.view,arch_db:sistemerp_ereport_template.templates_company_details
+msgid "<strong>Mobile: </strong>"
+msgstr "<strong>Móvil: </strong>"
+
+#. module: sistemerp_ereport_template
+#: model_terms:ir.ui.view,arch_db:sistemerp_ereport_template.report_invoice_layouted
+msgid "<strong>Subtotal: </strong>"
+msgstr "<strong>Total parcial: </strong>"
+
+#. module: sistemerp_ereport_template
+#: model_terms:ir.ui.view,arch_db:sistemerp_ereport_template.invoice_templates_customer_details
+msgid "<strong>Vat: </strong>"
+msgstr ""
+
+#. module: sistemerp_ereport_template
+#: model_terms:ir.ui.view,arch_db:sistemerp_ereport_template.exclusive_header
+msgid "Address"
+msgstr "Dirección"
+
+#. module: sistemerp_ereport_template
+#: model:ir.actions.report,name:sistemerp_ereport_template.report_invoice_template_advanced
+#: selection:res.company,standard_template:0
+msgid "Advanced"
+msgstr "Avanzado"
+
+#. module: sistemerp_ereport_template
+#: model_terms:ir.ui.view,arch_db:sistemerp_ereport_template.report_invoice_payment_move_line
+msgid "Amount"
+msgstr "Importe"
+
+#. module: sistemerp_ereport_template
+#: model_terms:ir.ui.view,arch_db:sistemerp_ereport_template.invoice_subtotal_tem
+msgid "Amount Due"
+msgstr "Importe adeudado"
+
+#. module: sistemerp_ereport_template
+#: model:ir.model.fields,field_description:sistemerp_ereport_template.field_report_extra_content__append_extra_content
+msgid "Append Extra Content"
+msgstr "Agregar contenido adicional"
+
+#. module: sistemerp_ereport_template
+#: model_terms:ir.ui.view,arch_db:sistemerp_ereport_template.creative_header
+#: model_terms:ir.ui.view,arch_db:sistemerp_ereport_template.template_header
+msgid "Bank:"
+msgstr "Banco:"
+
+#. module: sistemerp_ereport_template
+#: model:ir.model.fields,field_description:sistemerp_ereport_template.field_res_company__report_bank_id
+msgid "Banks"
+msgstr "Bancos"
+
+#. module: sistemerp_ereport_template
+#: model_terms:ir.ui.view,arch_db:sistemerp_ereport_template.advanced_header
+#: model_terms:ir.ui.view,arch_db:sistemerp_ereport_template.incredible_header
+#: model_terms:ir.ui.view,arch_db:sistemerp_ereport_template.innovative_header
+#: model_terms:ir.ui.view,arch_db:sistemerp_ereport_template.professional_header
+msgid "Cancelled Invoice"
+msgstr "Factura cancelada"
+
+#. module: sistemerp_ereport_template
+#: model_terms:ir.ui.view,arch_db:sistemerp_ereport_template.incredible_header
+#: model_terms:ir.ui.view,arch_db:sistemerp_ereport_template.innovative_header
+#: model_terms:ir.ui.view,arch_db:sistemerp_ereport_template.report_invoice_advanced_main
+#: model_terms:ir.ui.view,arch_db:sistemerp_ereport_template.report_invoice_creative_main
+#: model_terms:ir.ui.view,arch_db:sistemerp_ereport_template.report_invoice_elegant_main
+#: model_terms:ir.ui.view,arch_db:sistemerp_ereport_template.report_invoice_exclusive_main
+#: model_terms:ir.ui.view,arch_db:sistemerp_ereport_template.report_invoice_professional_main
+#: model_terms:ir.ui.view,arch_db:sistemerp_ereport_template.report_invoice_template_main
+msgid "Cancelled Invoice No:"
+msgstr "Nro. De factura cancelada:"
+
+#. module: sistemerp_ereport_template
+#: model_terms:ir.ui.view,arch_db:sistemerp_ereport_template.exclusive_header
+#: model_terms:ir.ui.view,arch_db:sistemerp_ereport_template.report_invoice_creative_main
+#: model_terms:ir.ui.view,arch_db:sistemerp_ereport_template.report_invoice_elegant_main
+#: model_terms:ir.ui.view,arch_db:sistemerp_ereport_template.report_invoice_incredible_main
+#: model_terms:ir.ui.view,arch_db:sistemerp_ereport_template.report_invoice_innovative_main
+#: model_terms:ir.ui.view,arch_db:sistemerp_ereport_template.report_invoice_professional_main
+#: model_terms:ir.ui.view,arch_db:sistemerp_ereport_template.report_invoice_template_main
+msgid "Cancelled Invoice To:"
+msgstr "Factura cancelada a:"
+
+#. module: sistemerp_ereport_template
+#: model_terms:ir.actions.act_window,help:sistemerp_ereport_template.action_report_extracontent
+msgid "Click to create a Report append extra content."
+msgstr "Haga clic para crear un informe anexar contenido adicional."
+
+#. module: sistemerp_ereport_template
+#: model:ir.model,name:sistemerp_ereport_template.model_res_company
+msgid "Companies"
+msgstr "Compañías"
+
+#. module: sistemerp_ereport_template
+#: model:ir.model.fields,field_description:sistemerp_ereport_template.field_report_extra_content__company_id
+#: model_terms:ir.ui.view,arch_db:sistemerp_ereport_template.view_model_search_extracontent
+msgid "Company"
+msgstr "Compañía"
+
+#. module: sistemerp_ereport_template
+#: model:ir.model.fields,field_description:sistemerp_ereport_template.field_res_company__company_address_color
+msgid "Company Address Color"
+msgstr "Color de dirección de la empresa"
+
+#. module: sistemerp_ereport_template
+#: model:ir.model.fields,field_description:sistemerp_ereport_template.field_res_company__company_color
+msgid "Company Name Color"
+msgstr "Nombre de la empresa Color"
+
+#. module: sistemerp_ereport_template
+#: model:ir.model,name:sistemerp_ereport_template.model_res_partner
+msgid "Contact"
+msgstr "Contacto"
+
+#. module: sistemerp_ereport_template
+#: model:ir.actions.report,name:sistemerp_ereport_template.report_invoice_template_contemporary
+#: selection:res.company,standard_template:0
+msgid "Contemporary"
+msgstr "Contemporáneo"
+
+#. module: sistemerp_ereport_template
+#: model:ir.model.fields,field_description:sistemerp_ereport_template.field_report_extra_content__create_uid
+#: model:ir.model.fields,field_description:sistemerp_ereport_template.field_report_fonts__create_uid
+msgid "Created by"
+msgstr "Creado por"
+
+#. module: sistemerp_ereport_template
+#: model:ir.model.fields,field_description:sistemerp_ereport_template.field_report_extra_content__create_date
+#: model:ir.model.fields,field_description:sistemerp_ereport_template.field_report_fonts__create_date
+msgid "Created on"
+msgstr "Creado el"
+
+#. module: sistemerp_ereport_template
+#: model:ir.actions.report,name:sistemerp_ereport_template.report_invoice_template_creative
+#: selection:res.company,standard_template:0
+msgid "Creative"
+msgstr "Creativo"
+
+#. module: sistemerp_ereport_template
+#: model_terms:ir.ui.view,arch_db:sistemerp_ereport_template.invoice_subtotal_tem
+msgid "Credit Amount"
+msgstr "Monto de crédito"
+
+#. module: sistemerp_ereport_template
+#: model:ir.model.fields,field_description:sistemerp_ereport_template.field_res_company__customer_address_color
+msgid "Customer Address Color"
+msgstr ""
+
+#. module: sistemerp_ereport_template
+#: model:ir.model.fields,field_description:sistemerp_ereport_template.field_res_company__customer_color
+msgid "Customer Name Color"
+msgstr ""
+
+#. module: sistemerp_ereport_template
+#: model_terms:ir.ui.view,arch_db:sistemerp_ereport_template.report_invoice_payment_move_line
+msgid "Date"
+msgstr "Fecha"
+
+#. module: sistemerp_ereport_template
+#: model_terms:ir.ui.view,arch_db:sistemerp_ereport_template.view_report_company_invoice_template
+msgid "Default Report Settings"
+msgstr "Configuración de informe predeterminada"
+
+#. module: sistemerp_ereport_template
+#: model_terms:ir.ui.view,arch_db:sistemerp_ereport_template.view_report_company_invoice_template
+msgid "Default Template Settings"
+msgstr "Configuración de plantilla predeterminada"
+
+#. module: sistemerp_ereport_template
+#: model_terms:ir.ui.view,arch_db:sistemerp_ereport_template.report_invoice_layouted
+#: model_terms:ir.ui.view,arch_db:sistemerp_ereport_template.report_invoice_order_lines
+msgid "Description"
+msgstr "Descripción"
+
+#. module: sistemerp_ereport_template
+#: model_terms:ir.ui.view,arch_db:sistemerp_ereport_template.report_invoice_layouted
+#: model_terms:ir.ui.view,arch_db:sistemerp_ereport_template.report_invoice_order_lines
+msgid "Disc.(%)"
+msgstr "Desc.(%)"
+
+#. module: sistemerp_ereport_template
+#: model:ir.model.fields,field_description:sistemerp_ereport_template.field_res_company__add_amount_in_words
+msgid "Display Amount In Word"
+msgstr ""
+
+#. module: sistemerp_ereport_template
+#: model:ir.model.fields,field_description:sistemerp_ereport_template.field_res_company__is_show_bank_details
+msgid "Display Bank Details"
+msgstr ""
+
+#. module: sistemerp_ereport_template
+#: model:ir.model.fields,field_description:sistemerp_ereport_template.field_res_company__is_company_bold
+msgid "Display Company Name in Bold"
+msgstr ""
+
+#. module: sistemerp_ereport_template
+#: model:ir.model.fields,field_description:sistemerp_ereport_template.field_res_company__is_customer_bold
+msgid "Display Customer Name in Bold"
+msgstr ""
+
+#. module: sistemerp_ereport_template
+#: model:ir.model.fields,field_description:sistemerp_ereport_template.field_res_company__is_show_invoice_notes
+msgid "Display Invoice Notes"
+msgstr ""
+
+#. module: sistemerp_ereport_template
+#: model:ir.model.fields,field_description:sistemerp_ereport_template.field_report_extra_content__display_name
+#: model:ir.model.fields,field_description:sistemerp_ereport_template.field_report_fonts__display_name
+msgid "Display Name"
+msgstr "Nombre mostrado"
+
+#. module: sistemerp_ereport_template
+#: model:ir.model.fields,field_description:sistemerp_ereport_template.field_res_company__is_show_payment_description
+msgid "Display Payment Description"
+msgstr ""
+
+#. module: sistemerp_ereport_template
+#: model:ir.model.fields,field_description:sistemerp_ereport_template.field_res_company__is_show_payment_notes
+msgid "Display Payment Term"
+msgstr ""
+
+#. module: sistemerp_ereport_template
+#: model:ir.model.fields,field_description:sistemerp_ereport_template.field_res_company__is_description
+msgid "Display Product Description"
+msgstr ""
+
+#. module: sistemerp_ereport_template
+#: model:ir.model.fields,field_description:sistemerp_ereport_template.field_res_company__add_product_image
+msgid "Display Product Image"
+msgstr ""
+
+#. module: sistemerp_ereport_template
+#: model:ir.model.fields,field_description:sistemerp_ereport_template.field_res_company__is_show_barcode
+msgid "Display Report Barcode"
+msgstr ""
+
+#. module: sistemerp_ereport_template
+#: model:ir.model.fields,field_description:sistemerp_ereport_template.field_res_company__report_footer_selection
+msgid "Display Report Footer"
+msgstr ""
+
+#. module: sistemerp_ereport_template
+#: model:ir.model.fields,field_description:sistemerp_ereport_template.field_res_company__is_show_signature
+msgid "Display Signature"
+msgstr ""
+
+#. module: sistemerp_ereport_template
+#: model:ir.model.fields,field_description:sistemerp_ereport_template.field_res_company__watermark
+msgid "Display Watermark"
+msgstr ""
+
+#. module: sistemerp_ereport_template
+#: model_terms:ir.ui.view,arch_db:sistemerp_ereport_template.advanced_header
+#: model_terms:ir.ui.view,arch_db:sistemerp_ereport_template.incredible_header
+#: model_terms:ir.ui.view,arch_db:sistemerp_ereport_template.innovative_header
+#: model_terms:ir.ui.view,arch_db:sistemerp_ereport_template.professional_header
+#: model_terms:ir.ui.view,arch_db:sistemerp_ereport_template.report_invoice_advanced_main
+#: model_terms:ir.ui.view,arch_db:sistemerp_ereport_template.report_invoice_creative_main
+#: model_terms:ir.ui.view,arch_db:sistemerp_ereport_template.report_invoice_elegant_main
+#: model_terms:ir.ui.view,arch_db:sistemerp_ereport_template.report_invoice_exclusive_main
+#: model_terms:ir.ui.view,arch_db:sistemerp_ereport_template.report_invoice_professional_main
+#: model_terms:ir.ui.view,arch_db:sistemerp_ereport_template.report_invoice_template_main
+msgid "Draft Invoice"
+msgstr "Factura borrador"
+
+#. module: sistemerp_ereport_template
+#: model_terms:ir.ui.view,arch_db:sistemerp_ereport_template.exclusive_header
+#: model_terms:ir.ui.view,arch_db:sistemerp_ereport_template.report_invoice_creative_main
+#: model_terms:ir.ui.view,arch_db:sistemerp_ereport_template.report_invoice_elegant_main
+#: model_terms:ir.ui.view,arch_db:sistemerp_ereport_template.report_invoice_incredible_main
+#: model_terms:ir.ui.view,arch_db:sistemerp_ereport_template.report_invoice_innovative_main
+#: model_terms:ir.ui.view,arch_db:sistemerp_ereport_template.report_invoice_professional_main
+#: model_terms:ir.ui.view,arch_db:sistemerp_ereport_template.report_invoice_template_main
+msgid "Draft Invoice To:"
+msgstr "Borrador de factura a:"
+
+#. module: sistemerp_ereport_template
+#: model:ir.actions.report,name:sistemerp_ereport_template.report_invoice_template_elegant
+#: selection:res.company,standard_template:0
+msgid "Elegant"
+msgstr "Elegante"
+
+#. module: sistemerp_ereport_template
+#: model_terms:ir.ui.view,arch_db:sistemerp_ereport_template.creative_header
+#: model_terms:ir.ui.view,arch_db:sistemerp_ereport_template.template_footer
+#: model_terms:ir.ui.view,arch_db:sistemerp_ereport_template.template_header
+msgid "Email:"
+msgstr "Correo electrónico:"
+
+#. module: sistemerp_ereport_template
+#: model:ir.actions.report,name:sistemerp_ereport_template.report_invoice_template_exclusive
+#: selection:res.company,standard_template:0
+msgid "Exclusive"
+msgstr "Exclusivo"
+
+#. module: sistemerp_ereport_template
+#: model:ir.model,name:sistemerp_ereport_template.model_report_extra_content
+msgid "Extra Content"
+msgstr ""
+
+#. module: sistemerp_ereport_template
+#: model:ir.model.fields,field_description:sistemerp_ereport_template.field_report_extra_content__file_name
+msgid "File name"
+msgstr ""
+
+#. module: sistemerp_ereport_template
+#: model:ir.model.fields,field_description:sistemerp_ereport_template.field_report_fonts__name
+msgid "Font Name"
+msgstr ""
+
+#. module: sistemerp_ereport_template
+#: model:ir.model.fields,field_description:sistemerp_ereport_template.field_report_fonts__family
+msgid "Font family"
+msgstr ""
+
+#. module: sistemerp_ereport_template
+#: model:ir.model,name:sistemerp_ereport_template.model_report_fonts
+msgid "Fonts available"
+msgstr ""
+
+#. module: sistemerp_ereport_template
+#: model:ir.model.fields,field_description:sistemerp_ereport_template.field_res_company__text_color
+msgid "General Text Color"
+msgstr ""
+
+#. module: sistemerp_ereport_template
+#: model_terms:ir.ui.view,arch_db:sistemerp_ereport_template.view_model_search_extracontent
+msgid "Group By"
+msgstr "Agrupar por"
+
+#. module: sistemerp_ereport_template
+#: model:ir.model.fields,field_description:sistemerp_ereport_template.field_report_extra_content__id
+#: model:ir.model.fields,field_description:sistemerp_ereport_template.field_report_fonts__id
+msgid "ID"
+msgstr ""
+
+#. module: sistemerp_ereport_template
+#: model_terms:ir.ui.view,arch_db:sistemerp_ereport_template.report_invoice_layouted
+#: model_terms:ir.ui.view,arch_db:sistemerp_ereport_template.report_invoice_order_lines
+msgid "Image"
+msgstr "Imagen"
+
+#. module: sistemerp_ereport_template
+#: model:ir.model.fields,field_description:sistemerp_ereport_template.field_account_invoice__amount_to_text
+msgid "In Words"
+msgstr ""
+
+#. module: sistemerp_ereport_template
+#: model:ir.actions.report,name:sistemerp_ereport_template.report_invoice_template_incredible
+#: selection:res.company,standard_template:0
+msgid "Incredible"
+msgstr "Increíble"
+
+#. module: sistemerp_ereport_template
+#: model:ir.actions.report,name:sistemerp_ereport_template.report_invoice_template_innovative
+#: selection:res.company,standard_template:0
+msgid "Innovative"
+msgstr "Innovador"
+
+#. module: sistemerp_ereport_template
+#: model:ir.model,name:sistemerp_ereport_template.model_account_invoice
+#: model_terms:ir.ui.view,arch_db:sistemerp_ereport_template.advanced_header
+#: model_terms:ir.ui.view,arch_db:sistemerp_ereport_template.incredible_header
+#: model_terms:ir.ui.view,arch_db:sistemerp_ereport_template.innovative_header
+#: model_terms:ir.ui.view,arch_db:sistemerp_ereport_template.professional_header
+msgid "Invoice"
+msgstr "Factura"
+
+#. module: sistemerp_ereport_template
+#: model_terms:ir.ui.view,arch_db:sistemerp_ereport_template.incredible_header
+#: model_terms:ir.ui.view,arch_db:sistemerp_ereport_template.innovative_header
+#: model_terms:ir.ui.view,arch_db:sistemerp_ereport_template.report_invoice_advanced_main
+#: model_terms:ir.ui.view,arch_db:sistemerp_ereport_template.report_invoice_creative_main
+#: model_terms:ir.ui.view,arch_db:sistemerp_ereport_template.report_invoice_elegant_main
+#: model_terms:ir.ui.view,arch_db:sistemerp_ereport_template.report_invoice_exclusive_main
+#: model_terms:ir.ui.view,arch_db:sistemerp_ereport_template.report_invoice_professional_main
+#: model_terms:ir.ui.view,arch_db:sistemerp_ereport_template.report_invoice_template_main
+msgid "Invoice No:"
+msgstr "Factura no:"
+
+#. module: sistemerp_ereport_template
+#: model:ir.model.fields,field_description:sistemerp_ereport_template.field_account_invoice__report_template_id
+#: model:ir.model.fields,field_description:sistemerp_ereport_template.field_res_company__report_template_id
+#: model:ir.model.fields,field_description:sistemerp_ereport_template.field_res_partner__report_template_id
+#: model_terms:ir.ui.view,arch_db:sistemerp_ereport_template.view_report_partner_invoice_template
+msgid "Invoice Template"
+msgstr "Plantilla de factura"
+
+#. module: sistemerp_ereport_template
+#: model:ir.model.fields,field_description:sistemerp_ereport_template.field_account_invoice__report_template_id1
+#: model:ir.model.fields,field_description:sistemerp_ereport_template.field_res_company__report_template_id1
+#: model:ir.model.fields,field_description:sistemerp_ereport_template.field_res_partner__report_template_id1
+msgid "Invoice Template1"
+msgstr ""
+
+#. module: sistemerp_ereport_template
+#: model_terms:ir.ui.view,arch_db:sistemerp_ereport_template.exclusive_header
+#: model_terms:ir.ui.view,arch_db:sistemerp_ereport_template.report_invoice_creative_main
+#: model_terms:ir.ui.view,arch_db:sistemerp_ereport_template.report_invoice_elegant_main
+#: model_terms:ir.ui.view,arch_db:sistemerp_ereport_template.report_invoice_incredible_main
+#: model_terms:ir.ui.view,arch_db:sistemerp_ereport_template.report_invoice_innovative_main
+#: model_terms:ir.ui.view,arch_db:sistemerp_ereport_template.report_invoice_professional_main
+#: model_terms:ir.ui.view,arch_db:sistemerp_ereport_template.report_invoice_template_main
+msgid "Invoice To:"
+msgstr "Factura a:"
+
+#. module: sistemerp_ereport_template
+#: model_terms:ir.ui.view,arch_db:sistemerp_ereport_template.invoice_templates_customer_details
+msgid "Invoicing address:"
+msgstr "Dirección de facturación:"
+
+#. module: sistemerp_ereport_template
+#: model_terms:ir.ui.view,arch_db:sistemerp_ereport_template.invoice_templates_customer_details
+msgid "Invoicing and shipping address:"
+msgstr "Dirección de facturación y de envío:"
+
+#. module: sistemerp_ereport_template
+#: model:ir.model.fields,field_description:sistemerp_ereport_template.field_report_extra_content____last_update
+#: model:ir.model.fields,field_description:sistemerp_ereport_template.field_report_fonts____last_update
+msgid "Last Modified on"
+msgstr "Última modificación en"
+
+#. module: sistemerp_ereport_template
+#: model:ir.model.fields,field_description:sistemerp_ereport_template.field_report_extra_content__write_uid
+#: model:ir.model.fields,field_description:sistemerp_ereport_template.field_report_fonts__write_uid
+msgid "Last Updated by"
+msgstr "Última actualización por"
+
+#. module: sistemerp_ereport_template
+#: model:ir.model.fields,field_description:sistemerp_ereport_template.field_report_extra_content__write_date
+#: model:ir.model.fields,field_description:sistemerp_ereport_template.field_report_fonts__write_date
+msgid "Last Updated on"
+msgstr "Última actualización el"
+
+#. module: sistemerp_ereport_template
+#: selection:res.company,watermark:0
+msgid "Logo"
+msgstr ""
+
+#. module: sistemerp_ereport_template
+#: model_terms:ir.ui.view,arch_db:sistemerp_ereport_template.report_invoice_payment_move_line
+msgid "Method"
+msgstr "Método"
+
+#. module: sistemerp_ereport_template
+#: model_terms:ir.ui.view,arch_db:sistemerp_ereport_template.creative_header
+#: model_terms:ir.ui.view,arch_db:sistemerp_ereport_template.template_header
+msgid "Mobile:"
+msgstr "Móvil:"
+
+#. module: sistemerp_ereport_template
+#: model:ir.model.fields,field_description:sistemerp_ereport_template.field_report_fonts__mode
+msgid "Mode"
+msgstr ""
+
+#. module: sistemerp_ereport_template
+#: model_terms:ir.ui.view,arch_db:sistemerp_ereport_template.view_model_search_extracontent
+msgid "Model"
+msgstr "Modelo"
+
+#. module: sistemerp_ereport_template
+#: sql_constraint:report.extra.content:0
+msgid "Model and Company must be unique."
+msgstr ""
+
+#. module: sistemerp_ereport_template
+#: selection:res.company,report_footer_selection:0
+msgid "Multi Columns Footer"
+msgstr "Pie de página multi columnas"
+
+#. module: sistemerp_ereport_template
+#: model_terms:ir.ui.view,arch_db:sistemerp_ereport_template.report_invoice_advanced_main
+#: model_terms:ir.ui.view,arch_db:sistemerp_ereport_template.report_invoice_creative_main
+#: model_terms:ir.ui.view,arch_db:sistemerp_ereport_template.report_invoice_elegant_main
+#: model_terms:ir.ui.view,arch_db:sistemerp_ereport_template.report_invoice_exclusive_main
+#: model_terms:ir.ui.view,arch_db:sistemerp_ereport_template.report_invoice_incredible_main
+#: model_terms:ir.ui.view,arch_db:sistemerp_ereport_template.report_invoice_innovative_main
+#: model_terms:ir.ui.view,arch_db:sistemerp_ereport_template.report_invoice_professional_main
+#: model_terms:ir.ui.view,arch_db:sistemerp_ereport_template.report_invoice_template_main
+msgid "PO:"
+msgstr "CORREOS:"
+
+#. module: sistemerp_ereport_template
+#: model_terms:ir.ui.view,arch_db:sistemerp_ereport_template.advanced_header
+#: model_terms:ir.ui.view,arch_db:sistemerp_ereport_template.incredible_header
+#: model_terms:ir.ui.view,arch_db:sistemerp_ereport_template.innovative_header
+#: model_terms:ir.ui.view,arch_db:sistemerp_ereport_template.professional_header
+msgid "PRO-FORMA"
+msgstr ""
+
+#. module: sistemerp_ereport_template
+#: model_terms:ir.ui.view,arch_db:sistemerp_ereport_template.incredible_header
+#: model_terms:ir.ui.view,arch_db:sistemerp_ereport_template.innovative_header
+#: model_terms:ir.ui.view,arch_db:sistemerp_ereport_template.report_invoice_advanced_main
+#: model_terms:ir.ui.view,arch_db:sistemerp_ereport_template.report_invoice_creative_main
+#: model_terms:ir.ui.view,arch_db:sistemerp_ereport_template.report_invoice_elegant_main
+#: model_terms:ir.ui.view,arch_db:sistemerp_ereport_template.report_invoice_exclusive_main
+#: model_terms:ir.ui.view,arch_db:sistemerp_ereport_template.report_invoice_professional_main
+#: model_terms:ir.ui.view,arch_db:sistemerp_ereport_template.report_invoice_template_main
+msgid "PRO-FORMA No:"
+msgstr ""
+
+#. module: sistemerp_ereport_template
+#: model_terms:ir.ui.view,arch_db:sistemerp_ereport_template.exclusive_header
+#: model_terms:ir.ui.view,arch_db:sistemerp_ereport_template.report_invoice_creative_main
+#: model_terms:ir.ui.view,arch_db:sistemerp_ereport_template.report_invoice_elegant_main
+#: model_terms:ir.ui.view,arch_db:sistemerp_ereport_template.report_invoice_incredible_main
+#: model_terms:ir.ui.view,arch_db:sistemerp_ereport_template.report_invoice_innovative_main
+#: model_terms:ir.ui.view,arch_db:sistemerp_ereport_template.report_invoice_professional_main
+#: model_terms:ir.ui.view,arch_db:sistemerp_ereport_template.report_invoice_template_main
+msgid "PRO-FORMA To:"
+msgstr "PRO-FORMA Para:"
+
+#. module: sistemerp_ereport_template
+#: model_terms:ir.ui.view,arch_db:sistemerp_ereport_template.template_footer
+msgid "Page: \n"
+"                    <span class=\"page\"/>\n"
+"                    / \n"
+"                    <span class=\"topage\"/>"
+msgstr ""
+
+#. module: sistemerp_ereport_template
+#: model:ir.model.fields,field_description:sistemerp_ereport_template.field_report_fonts__path
+msgid "Path"
+msgstr "Ruta"
+
+#. module: sistemerp_ereport_template
+#: model_terms:ir.ui.view,arch_db:sistemerp_ereport_template.report_invoice_payment_move_line
+msgid "Payment Status: Fully Paid"
+msgstr "Estado de pago: totalmente pagado"
+
+#. module: sistemerp_ereport_template
+#: model_terms:ir.ui.view,arch_db:sistemerp_ereport_template.report_invoice_payment_move_line
+msgid "Payment Status: Partial Paid"
+msgstr "Estado de pago: parcial pagado"
+
+#. module: sistemerp_ereport_template
+#: model_terms:ir.ui.view,arch_db:sistemerp_ereport_template.report_invoice_advanced_main
+#: model_terms:ir.ui.view,arch_db:sistemerp_ereport_template.report_invoice_creative_main
+#: model_terms:ir.ui.view,arch_db:sistemerp_ereport_template.report_invoice_elegant_main
+#: model_terms:ir.ui.view,arch_db:sistemerp_ereport_template.report_invoice_exclusive_main
+#: model_terms:ir.ui.view,arch_db:sistemerp_ereport_template.report_invoice_incredible_main
+#: model_terms:ir.ui.view,arch_db:sistemerp_ereport_template.report_invoice_innovative_main
+#: model_terms:ir.ui.view,arch_db:sistemerp_ereport_template.report_invoice_professional_main
+#: model_terms:ir.ui.view,arch_db:sistemerp_ereport_template.report_invoice_template_main
+msgid "Payment Status: Pending"
+msgstr "Estado de pago: Pendiente"
+
+#. module: sistemerp_ereport_template
+#: model_terms:ir.ui.view,arch_db:sistemerp_ereport_template.template_footer
+msgid "Phone:"
+msgstr "Teléfono:"
+
+#. module: sistemerp_ereport_template
+#: model:ir.model.fields,help:sistemerp_ereport_template.field_res_company__is_show_bank_details
+msgid "Please check it if you want to show Bank details in pdf."
+msgstr ""
+
+#. module: sistemerp_ereport_template
+#: model:ir.model.fields,help:sistemerp_ereport_template.field_res_company__is_company_bold
+msgid "Please check it if you want to show Company Name in Bold."
+msgstr ""
+
+#. module: sistemerp_ereport_template
+#: model:ir.model.fields,help:sistemerp_ereport_template.field_res_company__is_customer_bold
+msgid "Please check it if you want to show Customer Name in Bold."
+msgstr ""
+
+#. module: sistemerp_ereport_template
+#: model:ir.model.fields,help:sistemerp_ereport_template.field_res_company__is_show_invoice_notes
+msgid "Please check it if you want to show Invoice Notes in pdf."
+msgstr ""
+
+#. module: sistemerp_ereport_template
+#: model:ir.model.fields,help:sistemerp_ereport_template.field_res_company__is_show_payment_description
+msgid "Please check it if you want to show Payment Description in pdf."
+msgstr ""
+
+#. module: sistemerp_ereport_template
+#: model:ir.model.fields,help:sistemerp_ereport_template.field_res_company__is_show_payment_notes
+msgid "Please check it if you want to show Payment Term in pdf."
+msgstr ""
+
+#. module: sistemerp_ereport_template
+#: model:ir.model.fields,help:sistemerp_ereport_template.field_res_company__add_product_image
+msgid "Please check it if you want to show Product Image in pdf."
+msgstr ""
+
+#. module: sistemerp_ereport_template
+#: model:ir.model.fields,help:sistemerp_ereport_template.field_res_company__is_description
+msgid "Please check it if you want to show product description in report."
+msgstr ""
+
+#. module: sistemerp_ereport_template
+#: model:ir.model.fields,help:sistemerp_ereport_template.field_res_company__is_show_barcode
+msgid "Please check it if you want to show report barcode in pdf."
+msgstr ""
+
+#. module: sistemerp_ereport_template
+#: model:ir.model.fields,help:sistemerp_ereport_template.field_res_company__is_show_signature
+msgid "Please check it if you want to show signature in PDF."
+msgstr ""
+
+#. module: sistemerp_ereport_template
+#: model_terms:ir.ui.view,arch_db:sistemerp_ereport_template.view_report_company_invoice_template
+msgid "Please click here if you want to get all the fonts of your system. After click please reload the page."
+msgstr "Haga clic aquí si desea obtener todas las fuentes de su sistema. Después de hacer clic, vuelve a cargar la página."
+
+#. module: sistemerp_ereport_template
+#: model:ir.model.fields,help:sistemerp_ereport_template.field_res_company__font_size
+msgid "Please define report font size"
+msgstr ""
+
+#. module: sistemerp_ereport_template
+#: model:ir.model.fields,help:sistemerp_ereport_template.field_res_company__watermark_text
+msgid "Please enter watermark text"
+msgstr ""
+
+#. module: sistemerp_ereport_template
+#: code:addons/sistemerp_ereport_template/models/res_company.py:282
+#, python-format
+msgid "Please input font size is greater than 10 and lower than 25, otherwise your report will very massive."
+msgstr ""
+
+#. module: sistemerp_ereport_template
+#: code:addons/sistemerp_ereport_template/models/res_company.py:279
+#, python-format
+msgid "Please input watermark text font size is greater than 0 and lower than 10, otherwise your report will very massive."
+msgstr ""
+
+#. module: sistemerp_ereport_template
+#: model:ir.model.fields,help:sistemerp_ereport_template.field_account_invoice__report_template_id
+#: model:ir.model.fields,help:sistemerp_ereport_template.field_account_invoice__report_template_id1
+#: model:ir.model.fields,help:sistemerp_ereport_template.field_res_company__report_template_id
+#: model:ir.model.fields,help:sistemerp_ereport_template.field_res_company__report_template_id1
+#: model:ir.model.fields,help:sistemerp_ereport_template.field_res_partner__report_template_id
+#: model:ir.model.fields,help:sistemerp_ereport_template.field_res_partner__report_template_id1
+msgid "Please select Template report for Invoice"
+msgstr ""
+
+#. module: sistemerp_ereport_template
+#: model:ir.model.fields,help:sistemerp_ereport_template.field_res_company__report_bank_id
+msgid "Please select bank account which you want to show Bank details in pdf."
+msgstr ""
+
+#. module: sistemerp_ereport_template
+#: model:ir.model.fields,help:sistemerp_ereport_template.field_res_company__standard_template
+msgid "Please select your choice Standard Color Configuration for all Template."
+msgstr ""
+
+#. module: sistemerp_ereport_template
+#: model:ir.model.fields,help:sistemerp_ereport_template.field_res_company__logo_footer
+msgid "Please set Footer Logo for Report."
+msgstr ""
+
+#. module: sistemerp_ereport_template
+#: model:ir.model.fields,help:sistemerp_ereport_template.field_res_company__company_address_color
+msgid "Please set Hex color for Company Address."
+msgstr ""
+
+#. module: sistemerp_ereport_template
+#: model:ir.model.fields,help:sistemerp_ereport_template.field_res_company__company_color
+msgid "Please set Hex color for Company Name."
+msgstr ""
+
+#. module: sistemerp_ereport_template
+#: model:ir.model.fields,help:sistemerp_ereport_template.field_res_company__customer_address_color
+msgid "Please set Hex color for Customer Address."
+msgstr ""
+
+#. module: sistemerp_ereport_template
+#: model:ir.model.fields,help:sistemerp_ereport_template.field_res_company__customer_color
+msgid "Please set Hex color for Customer Name."
+msgstr ""
+
+#. module: sistemerp_ereport_template
+#: model:ir.model.fields,help:sistemerp_ereport_template.field_res_company__text_color
+msgid "Please set Hex color for General Text."
+msgstr ""
+
+#. module: sistemerp_ereport_template
+#: model:ir.model.fields,help:sistemerp_ereport_template.field_res_company__even_party_color
+msgid "Please set Hex color for Table Even Parity."
+msgstr ""
+
+#. module: sistemerp_ereport_template
+#: model:ir.model.fields,help:sistemerp_ereport_template.field_res_company__odd_party_color
+msgid "Please set Hex color for Table Odd Parity."
+msgstr ""
+
+#. module: sistemerp_ereport_template
+#: model:ir.model.fields,help:sistemerp_ereport_template.field_res_company__theme_text_color
+msgid "Please set Hex color for Template Text."
+msgstr ""
+
+#. module: sistemerp_ereport_template
+#: model:ir.model.fields,help:sistemerp_ereport_template.field_res_company__theme_color
+msgid "Please set Hex color for Template."
+msgstr ""
+
+#. module: sistemerp_ereport_template
+#: model:ir.model.fields,help:sistemerp_ereport_template.field_res_company__watermark_text_color
+msgid "Please set Hex color for Watermark text."
+msgstr ""
+
+#. module: sistemerp_ereport_template
+#: model:ir.model.fields,help:sistemerp_ereport_template.field_res_company__watermark_logo
+msgid "Please set Watermark Logo for Report."
+msgstr ""
+
+#. module: sistemerp_ereport_template
+#: model:ir.model.fields,help:sistemerp_ereport_template.field_res_company__watermark_text_font_size
+msgid "Please set watermark text font size"
+msgstr ""
+
+#. module: sistemerp_ereport_template
+#: model:ir.model.fields,help:sistemerp_ereport_template.field_res_company__add_amount_in_words
+msgid "Please unchecked if you want to hide amount in words"
+msgstr ""
+
+#. module: sistemerp_ereport_template
+#: model:ir.model.fields,help:sistemerp_ereport_template.field_report_extra_content__append_extra_content
+msgid "Please upload file (You can upload file like jpg, png, pdf, docx, pptx, xlsx, doc, ppt, xls, txt)"
+msgstr ""
+
+#. module: sistemerp_ereport_template
+#: code:addons/sistemerp_ereport_template/models/report_extra_content.py:36
+#, python-format
+msgid "Please upload pdf file only"
+msgstr ""
+
+#. module: sistemerp_ereport_template
+#: model:ir.model.fields,help:sistemerp_ereport_template.field_res_company__signature
+msgid "Please upload signature image to display in report."
+msgstr ""
+
+#. module: sistemerp_ereport_template
+#: model_terms:ir.ui.view,arch_db:sistemerp_ereport_template.report_invoice_layouted
+#: model_terms:ir.ui.view,arch_db:sistemerp_ereport_template.report_invoice_order_lines
+msgid "Price"
+msgstr "Precio"
+
+#. module: sistemerp_ereport_template
+#: model:ir.actions.report,name:sistemerp_ereport_template.report_invoice_template_professional
+#: selection:res.company,standard_template:0
+msgid "Professional"
+msgstr "Profesional"
+
+#. module: sistemerp_ereport_template
+#: model:ir.model,name:sistemerp_ereport_template.model_purchase_order
+msgid "Purchase Order"
+msgstr "Pedido de compra"
+
+#. module: sistemerp_ereport_template
+#: model_terms:ir.ui.view,arch_db:sistemerp_ereport_template.report_invoice_layouted
+#: model_terms:ir.ui.view,arch_db:sistemerp_ereport_template.report_invoice_order_lines
+msgid "Quantity"
+msgstr "Cantidad"
+
+#. module: sistemerp_ereport_template
+#: model_terms:ir.ui.view,arch_db:sistemerp_ereport_template.report_invoice_payment_move_line
+msgid "Ref."
+msgstr "Árbitro."
+
+#. module: sistemerp_ereport_template
+#: model_terms:ir.ui.view,arch_db:sistemerp_ereport_template.advanced_header
+#: model_terms:ir.ui.view,arch_db:sistemerp_ereport_template.incredible_header
+#: model_terms:ir.ui.view,arch_db:sistemerp_ereport_template.innovative_header
+#: model_terms:ir.ui.view,arch_db:sistemerp_ereport_template.professional_header
+msgid "Refund"
+msgstr "Reembolso"
+
+#. module: sistemerp_ereport_template
+#: model_terms:ir.ui.view,arch_db:sistemerp_ereport_template.incredible_header
+#: model_terms:ir.ui.view,arch_db:sistemerp_ereport_template.innovative_header
+#: model_terms:ir.ui.view,arch_db:sistemerp_ereport_template.report_invoice_advanced_main
+#: model_terms:ir.ui.view,arch_db:sistemerp_ereport_template.report_invoice_creative_main
+#: model_terms:ir.ui.view,arch_db:sistemerp_ereport_template.report_invoice_elegant_main
+#: model_terms:ir.ui.view,arch_db:sistemerp_ereport_template.report_invoice_exclusive_main
+#: model_terms:ir.ui.view,arch_db:sistemerp_ereport_template.report_invoice_professional_main
+#: model_terms:ir.ui.view,arch_db:sistemerp_ereport_template.report_invoice_template_main
+msgid "Refund No:"
+msgstr "Reembolso No:"
+
+#. module: sistemerp_ereport_template
+#: model_terms:ir.ui.view,arch_db:sistemerp_ereport_template.exclusive_header
+#: model_terms:ir.ui.view,arch_db:sistemerp_ereport_template.report_invoice_creative_main
+#: model_terms:ir.ui.view,arch_db:sistemerp_ereport_template.report_invoice_elegant_main
+#: model_terms:ir.ui.view,arch_db:sistemerp_ereport_template.report_invoice_incredible_main
+#: model_terms:ir.ui.view,arch_db:sistemerp_ereport_template.report_invoice_innovative_main
+#: model_terms:ir.ui.view,arch_db:sistemerp_ereport_template.report_invoice_professional_main
+#: model_terms:ir.ui.view,arch_db:sistemerp_ereport_template.report_invoice_template_main
+msgid "Refund To:"
+msgstr "Reembolso a:"
+
+#. module: sistemerp_ereport_template
+#: model_terms:ir.ui.view,arch_db:sistemerp_ereport_template.view_model_search_extracontent
+msgid "Report"
+msgstr "Informe"
+
+#. module: sistemerp_ereport_template
+#: model:ir.model,name:sistemerp_ereport_template.model_ir_actions_report
+msgid "Report Action"
+msgstr ""
+
+#. module: sistemerp_ereport_template
+#: model_terms:ir.ui.view,arch_db:sistemerp_ereport_template.view_report_partner_invoice_template
+msgid "Report Configuration"
+msgstr "Configuración de informes"
+
+#. module: sistemerp_ereport_template
+#: model:ir.actions.act_window,name:sistemerp_ereport_template.action_report_extracontent
+msgid "Report Extra Content"
+msgstr ""
+
+#. module: sistemerp_ereport_template
+#: model:ir.model.fields,field_description:sistemerp_ereport_template.field_res_company__font
+#: model_terms:ir.ui.view,arch_db:sistemerp_ereport_template.view_report_company_invoice_template
+msgid "Report Font"
+msgstr "Fuente de informe"
+
+#. module: sistemerp_ereport_template
+#: model:ir.model.fields,field_description:sistemerp_ereport_template.field_res_company__font_size
+msgid "Report Font Size(px)"
+msgstr ""
+
+#. module: sistemerp_ereport_template
+#: model_terms:ir.ui.view,arch_db:sistemerp_ereport_template.view_report_company_invoice_template
+msgid "Report Footer"
+msgstr "Pie de página del informe"
+
+#. module: sistemerp_ereport_template
+#: model:ir.model.fields,field_description:sistemerp_ereport_template.field_res_company__logo_footer
+msgid "Report Footer Logo"
+msgstr ""
+
+#. module: sistemerp_ereport_template
+#: model:ir.model.fields,field_description:sistemerp_ereport_template.field_res_company__invoice_logo
+msgid "Report Logo"
+msgstr ""
+
+#. module: sistemerp_ereport_template
+#: model:ir.model.fields,field_description:sistemerp_ereport_template.field_report_extra_content__model_id
+msgid "Report Type"
+msgstr "Tipo de informe"
+
+#. module: sistemerp_ereport_template
+#: model:ir.model.fields,field_description:sistemerp_ereport_template.field_res_company__watermark_logo
+msgid "Report Watermark Logo"
+msgstr ""
+
+#. module: sistemerp_ereport_template
+#: model_terms:ir.ui.view,arch_db:sistemerp_ereport_template.report_invoice_advanced_main
+#: model_terms:ir.ui.view,arch_db:sistemerp_ereport_template.report_invoice_creative_main
+#: model_terms:ir.ui.view,arch_db:sistemerp_ereport_template.report_invoice_elegant_main
+#: model_terms:ir.ui.view,arch_db:sistemerp_ereport_template.report_invoice_exclusive_main
+#: model_terms:ir.ui.view,arch_db:sistemerp_ereport_template.report_invoice_incredible_main
+#: model_terms:ir.ui.view,arch_db:sistemerp_ereport_template.report_invoice_innovative_main
+#: model_terms:ir.ui.view,arch_db:sistemerp_ereport_template.report_invoice_professional_main
+#: model_terms:ir.ui.view,arch_db:sistemerp_ereport_template.report_invoice_template_main
+msgid "SO:"
+msgstr "Orden de Venta:"
+
+#. module: sistemerp_ereport_template
+#: model:ir.model,name:sistemerp_ereport_template.model_sale_order
+msgid "Sale Order"
+msgstr "Orden de Venta:"
+
+#. module: sistemerp_ereport_template
+#: model:ir.model.fields,help:sistemerp_ereport_template.field_res_company__report_footer_selection
+msgid "Select footer style if you want to show in report"
+msgstr ""
+
+#. module: sistemerp_ereport_template
+#: model:ir.model.fields,help:sistemerp_ereport_template.field_res_company__font
+msgid "Set the font into the report header, it will be used as default font in the clever reports of the user company"
+msgstr ""
+
+#. module: sistemerp_ereport_template
+#: model:ir.model.fields,field_description:sistemerp_ereport_template.field_res_company__signature
+#: model_terms:ir.ui.view,arch_db:sistemerp_ereport_template.view_report_company_invoice_template
+msgid "Signature"
+msgstr "Firma"
+
+#. module: sistemerp_ereport_template
+#: model_terms:ir.ui.view,arch_db:sistemerp_ereport_template.report_invoice_layouted
+#: model_terms:ir.ui.view,arch_db:sistemerp_ereport_template.report_invoice_order_lines
+#: model_terms:ir.ui.view,arch_db:sistemerp_ereport_template.report_invoice_payment_move_line
+msgid "Sr."
+msgstr "Item"
+
+#. module: sistemerp_ereport_template
+#: selection:res.company,report_footer_selection:0
+msgid "Standard"
+msgstr "Estándar"
+
+#. module: sistemerp_ereport_template
+#: model:ir.model.fields,field_description:sistemerp_ereport_template.field_res_company__standard_template
+msgid "Standard Template Configuration"
+msgstr ""
+
+#. module: sistemerp_ereport_template
+#: selection:res.company,watermark:0
+msgid "Status"
+msgstr "Estado"
+
+#. module: sistemerp_ereport_template
+#: model_terms:ir.ui.view,arch_db:sistemerp_ereport_template.invoice_subtotal_tem
+msgid "SubTotal"
+msgstr "Total parcial"
+
+#. module: sistemerp_ereport_template
+#: model:ir.model.fields,field_description:sistemerp_ereport_template.field_res_company__even_party_color
+msgid "Table Even Parity Color"
+msgstr ""
+
+#. module: sistemerp_ereport_template
+#: model:ir.model.fields,field_description:sistemerp_ereport_template.field_res_company__odd_party_color
+msgid "Table Odd Parity Color"
+msgstr ""
+
+#. module: sistemerp_ereport_template
+#: model_terms:ir.ui.view,arch_db:sistemerp_ereport_template.report_invoice_layouted
+#: model_terms:ir.ui.view,arch_db:sistemerp_ereport_template.report_invoice_order_lines
+msgid "Taxes"
+msgstr "Impuestos"
+
+#. module: sistemerp_ereport_template
+#: model:ir.model.fields,field_description:sistemerp_ereport_template.field_res_company__theme_color
+msgid "Template Base Color"
+msgstr ""
+
+#. module: sistemerp_ereport_template
+#: model_terms:ir.ui.view,arch_db:sistemerp_ereport_template.view_report_company_invoice_template
+msgid "Template Configuration"
+msgstr "Configuración de plantilla"
+
+#. module: sistemerp_ereport_template
+#: model:ir.model.fields,field_description:sistemerp_ereport_template.field_res_company__theme_text_color
+msgid "Template Text Color"
+msgstr ""
+
+#. module: sistemerp_ereport_template
+#: selection:res.company,watermark:0
+msgid "Text"
+msgstr "Texto"
+
+#. module: sistemerp_ereport_template
+#: model:ir.model.fields,help:sistemerp_ereport_template.field_account_invoice__amount_to_text
+msgid "The amount in words"
+msgstr ""
+
+#. module: sistemerp_ereport_template
+#: model:ir.model.fields,help:sistemerp_ereport_template.field_res_company__invoice_logo
+msgid "This field holds the image used as Logo for Invoice template report"
+msgstr ""
+
+#. module: sistemerp_ereport_template
+#: model_terms:ir.ui.view,arch_db:sistemerp_ereport_template.invoice_subtotal_tem
+msgid "Total"
+msgstr "Total"
+
+#. module: sistemerp_ereport_template
+#: model_terms:ir.ui.view,arch_db:sistemerp_ereport_template.template_total_amount_word
+msgid "Total in word:-"
+msgstr "Total en palabra:-"
+
+#. module: sistemerp_ereport_template
+#: code:addons/sistemerp_ereport_template/models/account_invoice.py:73
+#, python-format
+msgid "Uncategorized"
+msgstr ""
+
+#. module: sistemerp_ereport_template
+#: model_terms:ir.ui.view,arch_db:sistemerp_ereport_template.report_invoice_layouted
+#: model_terms:ir.ui.view,arch_db:sistemerp_ereport_template.report_invoice_order_lines
+msgid "Unit Price"
+msgstr "Precio unitario"
+
+#. module: sistemerp_ereport_template
+#: model_terms:ir.ui.view,arch_db:sistemerp_ereport_template.advanced_header
+#: model_terms:ir.ui.view,arch_db:sistemerp_ereport_template.incredible_header
+#: model_terms:ir.ui.view,arch_db:sistemerp_ereport_template.innovative_header
+#: model_terms:ir.ui.view,arch_db:sistemerp_ereport_template.professional_header
+msgid "Vendor Bill"
+msgstr "Factura de proveedor"
+
+#. module: sistemerp_ereport_template
+#: model_terms:ir.ui.view,arch_db:sistemerp_ereport_template.incredible_header
+#: model_terms:ir.ui.view,arch_db:sistemerp_ereport_template.innovative_header
+#: model_terms:ir.ui.view,arch_db:sistemerp_ereport_template.report_invoice_advanced_main
+#: model_terms:ir.ui.view,arch_db:sistemerp_ereport_template.report_invoice_creative_main
+#: model_terms:ir.ui.view,arch_db:sistemerp_ereport_template.report_invoice_elegant_main
+#: model_terms:ir.ui.view,arch_db:sistemerp_ereport_template.report_invoice_exclusive_main
+#: model_terms:ir.ui.view,arch_db:sistemerp_ereport_template.report_invoice_professional_main
+#: model_terms:ir.ui.view,arch_db:sistemerp_ereport_template.report_invoice_template_main
+msgid "Vendor Bill No:"
+msgstr "Factura del proveedor no:"
+
+#. module: sistemerp_ereport_template
+#: model_terms:ir.ui.view,arch_db:sistemerp_ereport_template.exclusive_header
+#: model_terms:ir.ui.view,arch_db:sistemerp_ereport_template.report_invoice_creative_main
+#: model_terms:ir.ui.view,arch_db:sistemerp_ereport_template.report_invoice_elegant_main
+#: model_terms:ir.ui.view,arch_db:sistemerp_ereport_template.report_invoice_incredible_main
+#: model_terms:ir.ui.view,arch_db:sistemerp_ereport_template.report_invoice_innovative_main
+#: model_terms:ir.ui.view,arch_db:sistemerp_ereport_template.report_invoice_professional_main
+#: model_terms:ir.ui.view,arch_db:sistemerp_ereport_template.report_invoice_template_main
+msgid "Vendor Bill To:"
+msgstr "Factura del proveedor a:"
+
+#. module: sistemerp_ereport_template
+#: model_terms:ir.ui.view,arch_db:sistemerp_ereport_template.advanced_header
+#: model_terms:ir.ui.view,arch_db:sistemerp_ereport_template.incredible_header
+#: model_terms:ir.ui.view,arch_db:sistemerp_ereport_template.innovative_header
+#: model_terms:ir.ui.view,arch_db:sistemerp_ereport_template.professional_header
+msgid "Vendor Refund"
+msgstr "Reembolso del vendedor"
+
+#. module: sistemerp_ereport_template
+#: model_terms:ir.ui.view,arch_db:sistemerp_ereport_template.incredible_header
+#: model_terms:ir.ui.view,arch_db:sistemerp_ereport_template.innovative_header
+#: model_terms:ir.ui.view,arch_db:sistemerp_ereport_template.report_invoice_advanced_main
+#: model_terms:ir.ui.view,arch_db:sistemerp_ereport_template.report_invoice_creative_main
+#: model_terms:ir.ui.view,arch_db:sistemerp_ereport_template.report_invoice_elegant_main
+#: model_terms:ir.ui.view,arch_db:sistemerp_ereport_template.report_invoice_exclusive_main
+#: model_terms:ir.ui.view,arch_db:sistemerp_ereport_template.report_invoice_professional_main
+#: model_terms:ir.ui.view,arch_db:sistemerp_ereport_template.report_invoice_template_main
+msgid "Vendor Refund No:"
+msgstr "Reembolso del proveedor no:"
+
+#. module: sistemerp_ereport_template
+#: model_terms:ir.ui.view,arch_db:sistemerp_ereport_template.exclusive_header
+#: model_terms:ir.ui.view,arch_db:sistemerp_ereport_template.report_invoice_creative_main
+#: model_terms:ir.ui.view,arch_db:sistemerp_ereport_template.report_invoice_elegant_main
+#: model_terms:ir.ui.view,arch_db:sistemerp_ereport_template.report_invoice_incredible_main
+#: model_terms:ir.ui.view,arch_db:sistemerp_ereport_template.report_invoice_innovative_main
+#: model_terms:ir.ui.view,arch_db:sistemerp_ereport_template.report_invoice_professional_main
+#: model_terms:ir.ui.view,arch_db:sistemerp_ereport_template.report_invoice_template_main
+msgid "Vendor Refund To:"
+msgstr "Reembolso del vendedor a:"
+
+#. module: sistemerp_ereport_template
+#: model_terms:ir.ui.view,arch_db:sistemerp_ereport_template.view_report_company_invoice_template
+msgid "Watermark"
+msgstr "Filigrana"
+
+#. module: sistemerp_ereport_template
+#: model:ir.model.fields,field_description:sistemerp_ereport_template.field_res_company__watermark_text
+msgid "Watermark Text"
+msgstr ""
+
+#. module: sistemerp_ereport_template
+#: model:ir.model.fields,field_description:sistemerp_ereport_template.field_res_company__watermark_text_color
+msgid "Watermark Text Color"
+msgstr ""
+
+#. module: sistemerp_ereport_template
+#: model:ir.model.fields,field_description:sistemerp_ereport_template.field_res_company__watermark_text_font_size
+msgid "Watermark Text Font Size(em)"
+msgstr ""
+
+#. module: sistemerp_ereport_template
+#: model:ir.model.fields,help:sistemerp_ereport_template.field_res_company__watermark
+msgid "We can choose watermark for pdf either logo or text or status."
+msgstr ""
+
+#. module: sistemerp_ereport_template
+#: model_terms:ir.ui.view,arch_db:sistemerp_ereport_template.template_footer
+msgid "Web:"
+msgstr ""
+
+#. module: sistemerp_ereport_template
+#: model_terms:ir.actions.act_window,help:sistemerp_ereport_template.action_report_extracontent
+msgid "You can append extra content while print report based on model\n"
+"                for eg. if you want to add brochure, while print Quotation."
+msgstr ""
+
+#. module: sistemerp_ereport_template
+#: sql_constraint:report.fonts:0
+msgid "You can not register two fonts with the same name"
+msgstr "No puedes registrar dos fuentes con el mismo nombre"
+
+#. module: sistemerp_ereport_template
+#: model_terms:ir.ui.view,arch_db:sistemerp_ereport_template.view_report_company_invoice_template
+msgid "like #2763a1"
+msgstr ""
+
+#. module: sistemerp_ereport_template
+#: model_terms:ir.ui.view,arch_db:sistemerp_ereport_template.view_report_company_invoice_template
+msgid "like #2763c1"
+msgstr ""
+
+#. module: sistemerp_ereport_template
+#: model_terms:ir.ui.view,arch_db:sistemerp_ereport_template.view_report_company_invoice_template
+msgid "like #2b4e99"
+msgstr ""
+
+#. module: sistemerp_ereport_template
+#: model_terms:ir.ui.view,arch_db:sistemerp_ereport_template.view_report_company_invoice_template
+msgid "like #5bb3d2"
+msgstr ""
+
+#. module: sistemerp_ereport_template
+#: model_terms:ir.ui.view,arch_db:sistemerp_ereport_template.view_report_company_invoice_template
+msgid "like #5cc2d2"
+msgstr ""
+
+#. module: sistemerp_ereport_template
+#: model_terms:ir.ui.view,arch_db:sistemerp_ereport_template.view_report_company_invoice_template
+msgid "like #aea8a8"
+msgstr ""
+
+#. module: sistemerp_ereport_template
+#: model_terms:ir.ui.view,arch_db:sistemerp_ereport_template.view_report_company_invoice_template
+msgid "like #aea8aa"
+msgstr ""
+
+#. module: sistemerp_ereport_template
+#: model_terms:ir.ui.view,arch_db:sistemerp_ereport_template.view_report_company_invoice_template
+msgid "like #b30000"
+msgstr ""
+
+#. module: sistemerp_ereport_template
+#: model_terms:ir.ui.view,arch_db:sistemerp_ereport_template.view_report_company_invoice_template
+msgid "like #b30010"
+msgstr ""
+
+#. module: sistemerp_ereport_template
+#: model_terms:ir.ui.view,arch_db:sistemerp_ereport_template.view_report_company_invoice_template
+msgid "like #d4d2d2"
+msgstr ""
+

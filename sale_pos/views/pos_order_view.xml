@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record model="ir.ui.view" id="view_pos_pos_form">
+            <field name="name">pos.order.form</field>
+            <field name="model">pos.order</field>
+            <field name="inherit_id" ref="point_of_sale.view_pos_pos_form" />
+            <field name="arch" type="xml">
+                <xpath expr="//button[@name=%(point_of_sale.action_pos_payment)d]" position="attributes">
+	              <attribute name="context">{'pos_session_id' : session_id, 'paid_on_line':True}</attribute>
+	              <attribute name="groups">point_of_sale.group_pos_user</attribute>
+	            </xpath>
+	            <xpath expr="//button[@name='action_pos_order_invoice']" position="attributes">
+	            	<attribute name="groups">point_of_sale.group_pos_user</attribute>
+	            </xpath>
+	            <xpath expr="//button[@name='refund']" position="attributes">
+	            	<attribute name="groups">point_of_sale.group_pos_user</attribute>
+	            </xpath>
+	            <xpath expr="//button[@name='refund']" position="after">
+					<button name="action_invoice_sent" type="object" string="Send by Email" attrs="{'invisible':[('state', 'not in', ('invoiced'))]}" groups="base.group_user"/>
+                	<button name="invoice_print" string="Print Invoice" type="object" attrs="{'invisible':[('state', 'not in', ('invoiced'))]}" groups="base.group_user"/>
+	            </xpath>                                   
+            </field>
+        </record>
+    </data>
+</odoo>

@@ -1,0 +1,3 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_report_fonts,access_report_fonts,model_report_fonts,,1,1,1,1
+access_report_extra_content,access_report_extra_content,model_report_extra_content,,1,1,1,1

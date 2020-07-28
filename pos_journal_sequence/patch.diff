@@ -1,0 +1,11 @@
+--- a/addons/point_of_sale/static/src/js/screens.js
++++ b/addons/point_of_sale/static/src/js/screens.js
+@@ -2035,6 +2035,9 @@ var PaymentScreenWidget = ScreenWidget.extend({
+             this.finalize_validation();
+         }
+     },
++    validate_journal_invoice: function()  {
++        return false;
++    },
+ });
+ gui.define_screen({name:'payment', widget: PaymentScreenWidget});
