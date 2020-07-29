@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <report
+            id="pos_session_report"
+            model="pos.session"
+            string="Session Summary Report"
+            report_type="qweb-pdf"
+            name="pos_reports.pos_session_report_template"
+            file="pos_reports.pos_session_report_template"
+        />
+        
+        <report
+            id="pos_order_report"
+            model="pos.session"
+            string="Order Summary Report"
+            report_type="qweb-pdf"
+            name="pos_reports.pos_order_report_template"
+            file="pos_reports.pos_order_report_template"
+        />
+        <!-- report
+	        id="pos_report_xlsx"
+	        model="pos.session"
+	        string="Session Summary Report XLSX"
+	        report_type="xlsx"
+	        name="pos_reports.report_pos_session_xlsx"
+	        file="Session"
+	        attachment_use="False"
+	    /-->
+    </data>
+</odoo>

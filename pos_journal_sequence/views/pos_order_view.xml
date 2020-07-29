@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <record id="view_pos_pos_form" model="ir.ui.view">
+        <field name="name">pos.order.form</field>
+        <field name="model">pos.order</field>
+        <field name="inherit_id" ref="point_of_sale.view_pos_pos_form" />
+        <field name="arch" type="xml">
+            <field name="fiscal_position_id" position="attributes">
+                <attribute name="invisible">True</attribute>
+            </field>
+            <field name="fiscal_position_id" position="after">
+                <field name="invoice_journal" />
+            </field>
+        </field>
+    </record>
+
+    <record id="view_pos_order_tree" model="ir.ui.view">
+        <field name="name">pos.order.tree.inherit_id.pos.journal.sequence</field>
+        <field name="model">pos.order</field>
+        <field name="inherit_id" ref="point_of_sale.view_pos_order_tree" />
+        <field name="arch" type="xml">
+            <field name="name" position="after">
+                <field name="number" />
+            </field>
+        </field>
+    </record>
+
+</odoo>

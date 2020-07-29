@@ -1,0 +1,486 @@
+<?xml version="1.0" ?>
+<odoo>
+    <record id="l10n_pe.district_pe_010601" model="l10n_pe.res.city.district">
+        <field name="name">San Nicolas</field>
+    </record>
+
+    <record id="l10n_pe.district_pe_020702" model="l10n_pe.res.city.district">
+        <field name="name">San Nicolas</field>
+    </record>
+
+    <record id="l10n_pe.district_pe_021303" model="l10n_pe.res.city.district">
+        <field name="name">Eleazar Guzman Barron</field>
+    </record>
+
+    <record id="l10n_pe.district_pe_021802" model="l10n_pe.res.city.district">
+        <field name="name">Caceres del Peru</field>
+    </record>
+
+    <record id="l10n_pe.district_pe_040201" model="l10n_pe.res.city.district">
+        <field name="name">Camana</field>
+    </record>
+
+    <record id="l10n_pe.district_pe_040203" model="l10n_pe.res.city.district">
+        <field name="name">Mariano Nicolas Valcarcel</field>
+    </record>
+
+    <record id="l10n_pe.district_pe_040204" model="l10n_pe.res.city.district">
+        <field name="name">Mariscal Caceres</field>
+    </record>
+
+    <record id="l10n_pe.district_pe_040205" model="l10n_pe.res.city.district">
+        <field name="name">Nicolas de Pierola</field>
+    </record>
+
+    <record id="l10n_pe.district_pe_060305" model="l10n_pe.res.city.district">
+        <field name="name">Jorge Chavez</field>
+    </record>
+
+    <record id="l10n_pe.district_pe_060306" model="l10n_pe.res.city.district">
+        <field name="name">Jose Galvez</field>
+    </record>
+
+    <record id="l10n_pe.district_pe_060504" model="l10n_pe.res.city.district">
+        <field name="name">Guzmango</field>
+    </record>
+
+    <record id="l10n_pe.district_pe_061001" model="l10n_pe.res.city.district">
+        <field name="name">Pedro Galvez</field>
+    </record>
+
+    <record id="l10n_pe.district_pe_090111" model="l10n_pe.res.city.district">
+        <field name="name">Mariscal Caceres</field>
+    </record>
+
+    <record id="l10n_pe.district_pe_090706" model="l10n_pe.res.city.district">
+        <field name="name">Daniel Hernandez</field>
+    </record>
+
+    <record id="l10n_pe.district_pe_120412" model="l10n_pe.res.city.district">
+        <field name="name">Julcan</field>
+    </record>
+
+    <record id="l10n_pe.district_pe_120807" model="l10n_pe.res.city.district">
+        <field name="name">Santa Barbara de Carhuacayan</field>
+    </record>
+
+    <record id="l10n_pe.district_pe_130206" model="l10n_pe.res.city.district">
+        <field name="name">Razuri</field>
+    </record>
+
+    <record id="l10n_pe.district_pe_130501" model="l10n_pe.res.city.district">
+        <field name="name">Julcan</field>
+    </record>
+
+    <record id="l10n_pe.district_pe_151005" model="l10n_pe.res.city.district">
+        <field name="name">Azangaro</field>
+    </record>
+
+    <record id="l10n_pe.district_pe_160603" model="l10n_pe.res.city.district">
+        <field name="name">Padre Marquez</field>
+    </record>
+
+    <record id="l10n_pe.district_pe_210201" model="l10n_pe.res.city.district">
+        <field name="name">Azangaro</field>
+    </record>
+
+    <record id="l10n_pe.district_pe_030220" model="l10n_pe.res.city.district">
+        <field name="name">Jose Maria Arguedas</field>
+    </record>
+
+    <record id="l10n_pe.district_pe_040129" model="l10n_pe.res.city.district">
+        <field name="name">Jose Luis Bustamante Y Rivero</field>
+    </record>
+
+    <record id="l10n_pe.district_pe_050109" model="l10n_pe.res.city.district">
+        <field name="name">San Jose de Ticllas</field>
+    </record>
+
+    <record id="l10n_pe.district_pe_050116" model="l10n_pe.res.city.district">
+        <field name="name">Andres Avelino Caceres Dorregaray</field>
+    </record>
+
+    <record id="l10n_pe.district_pe_050809" model="l10n_pe.res.city.district">
+        <field name="name">San Jose de ushua</field>
+    </record>
+
+    <record id="l10n_pe.district_pe_050902" model="l10n_pe.res.city.district">
+        <field name="name">Belen</field>
+    </record>
+
+    <record id="l10n_pe.district_pe_060608" model="l10n_pe.res.city.district">
+        <field name="name">San Andres de Cutervo</field>
+    </record>
+
+    <record id="l10n_pe.district_pe_060801" model="l10n_pe.res.city.district">
+        <field name="name">Jaen</field>
+    </record>
+
+    <record id="l10n_pe.district_pe_060811" model="l10n_pe.res.city.district">
+        <field name="name">San Jose del Alto</field>
+    </record>
+
+    <record id="l10n_pe.district_pe_060906" model="l10n_pe.res.city.district">
+        <field name="name">San Jose de Lourdes</field>
+    </record>
+
+    <record id="l10n_pe.district_pe_061006" model="l10n_pe.res.city.district">
+        <field name="name">Jose Manuel Quiroz</field>
+    </record>
+
+    <record id="l10n_pe.district_pe_061007" model="l10n_pe.res.city.district">
+        <field name="name">Jose Sabogal</field>
+    </record>
+
+    <record id="l10n_pe.district_pe_100604" model="l10n_pe.res.city.district">
+        <field name="name">Jose Crespo y Castillo</field>
+    </record>
+
+    <record id="l10n_pe.district_pe_110109" model="l10n_pe.res.city.district">
+        <field name="name">San Jose de Los Molinos</field>
+    </record>
+
+    <record id="l10n_pe.district_pe_110506" model="l10n_pe.res.city.district">
+        <field name="name">San Andres</field>
+    </record>
+
+    <record id="l10n_pe.district_pe_120214" model="l10n_pe.res.city.district">
+        <field name="name">San Jose de Quero</field>
+    </record>
+
+    <record id="l10n_pe.district_pe_130705" model="l10n_pe.res.city.district">
+        <field name="name">San Jose</field>
+    </record>
+
+    <record id="l10n_pe.district_pe_140105" model="l10n_pe.res.city.district">
+        <field name="name">Jose Leonardo Ortiz</field>
+    </record>
+
+    <record id="l10n_pe.district_pe_140311" model="l10n_pe.res.city.district">
+        <field name="name">San Jose</field>
+    </record>
+
+    <record id="l10n_pe.district_pe_150715" model="l10n_pe.res.city.district">
+        <field name="name">San Andres de Tupicocha</field>
+    </record>
+
+    <record id="l10n_pe.district_pe_160112" model="l10n_pe.res.city.district">
+        <field name="name">Belen</field>
+    </record>
+
+    <record id="l10n_pe.district_pe_210207" model="l10n_pe.res.city.district">
+        <field name="name">Jose Domingo Choquehuanca</field>
+    </record>
+
+    <record id="l10n_pe.district_pe_210212" model="l10n_pe.res.city.district">
+        <field name="name">San Jose</field>
+    </record>
+
+    <record id="l10n_pe.district_pe_220301" model="l10n_pe.res.city.district">
+        <field name="name">San Jose de Sisa</field>
+    </record>
+
+    <record id="l10n_pe.district_pe_010403" model="l10n_pe.res.city.district">
+        <field name="name">Rio Santiago</field>
+    </record>
+
+    <record id="l10n_pe.district_pe_010511" model="l10n_pe.res.city.district">
+        <field name="name">Maria</field>
+    </record>
+
+    <record id="l10n_pe.district_pe_021004" model="l10n_pe.res.city.district">
+        <field name="name">Chavin de Huantar</field>
+    </record>
+
+    <record id="l10n_pe.district_pe_030215" model="l10n_pe.res.city.district">
+        <field name="name">Santa Maria de Chicmo</field>
+    </record>
+
+    <record id="l10n_pe.district_pe_040109" model="l10n_pe.res.city.district">
+        <field name="name">Mariano Melgar</field>
+    </record>
+
+    <record id="l10n_pe.district_pe_040202" model="l10n_pe.res.city.district">
+        <field name="name">Jose Maria Quimper</field>
+    </record>
+
+    <record id="l10n_pe.district_pe_040301" model="l10n_pe.res.city.district">
+        <field name="name">Caraveli</field>
+    </record>
+
+    <record id="l10n_pe.district_pe_040302" model="l10n_pe.res.city.district">
+        <field name="name">Acari</field>
+    </record>
+
+    <record id="l10n_pe.district_pe_040606" model="l10n_pe.res.city.district">
+        <field name="name">Rio Grande</field>
+    </record>
+
+    <record id="l10n_pe.district_pe_050204" model="l10n_pe.res.city.district">
+        <field name="name">Maria Parado de Bellido","0</field>
+    </record>
+
+    <record id="l10n_pe.district_pe_060301" model="l10n_pe.res.city.district">
+        <field name="name">Celendin</field>
+    </record>
+
+    <record id="l10n_pe.district_pe_061102" model="l10n_pe.res.city.district">
+        <field name="name">Bolivar</field>
+    </record>
+
+    <record id="l10n_pe.district_pe_100109" model="l10n_pe.res.city.district">
+        <field name="name">Santa Maria del Valle</field>
+    </record>
+
+    <record id="l10n_pe.district_pe_100311" model="l10n_pe.res.city.district">
+        <field name="name">Marias</field>
+    </record>
+
+    <record id="l10n_pe.district_pe_100503" model="l10n_pe.res.city.district">
+        <field name="name">Chavin de Pariarca</field>
+    </record>
+
+    <record id="l10n_pe.district_pe_100602" model="l10n_pe.res.city.district">
+        <field name="name">Daniel Alomia Robles</field>
+    </record>
+
+    <record id="l10n_pe.district_pe_100603" model="l10n_pe.res.city.district">
+        <field name="name">Hermilio Valdizan</field>
+    </record>
+
+    <record id="l10n_pe.district_pe_101006" model="l10n_pe.res.city.district">
+        <field name="name">San Francisco de Asis</field>
+    </record>
+
+    <record id="l10n_pe.district_pe_101101" model="l10n_pe.res.city.district">
+        <field name="name">Chavinillo</field>
+    </record>
+
+    <record id="l10n_pe.district_pe_110203" model="l10n_pe.res.city.district">
+        <field name="name">Chavin</field>
+    </record>
+
+    <record id="l10n_pe.district_pe_110403" model="l10n_pe.res.city.district">
+        <field name="name">Rio Grande</field>
+    </record>
+
+    <record id="l10n_pe.district_pe_120129" model="l10n_pe.res.city.district">
+        <field name="name">San Agustin</field>
+    </record>
+
+    <record id="l10n_pe.district_pe_120207" model="l10n_pe.res.city.district">
+        <field name="name">Heroinas Toledo</field>
+    </record>
+
+    <record id="l10n_pe.district_pe_120607" model="l10n_pe.res.city.district">
+        <field name="name">Rio Negro</field>
+    </record>
+
+    <record id="l10n_pe.district_pe_120608" model="l10n_pe.res.city.district">
+        <field name="name">Rio Tambo</field>
+    </record>
+
+    <record id="l10n_pe.district_pe_130301" model="l10n_pe.res.city.district">
+        <field name="name">Bolivar</field>
+    </record>
+
+    <record id="l10n_pe.district_pe_150111" model="l10n_pe.res.city.district">
+        <field name="name">El Agustino</field>
+    </record>
+
+    <record id="l10n_pe.district_pe_150113" model="l10n_pe.res.city.district">
+        <field name="name">Jesus Maria</field>
+    </record>
+
+    <record id="l10n_pe.district_pe_150135" model="l10n_pe.res.city.district">
+        <field name="name">San Martin de Porres</field>
+    </record>
+
+    <record id="l10n_pe.district_pe_150138" model="l10n_pe.res.city.district">
+        <field name="name">Santa Maria del Mar</field>
+    </record>
+
+    <record id="l10n_pe.district_pe_150143" model="l10n_pe.res.city.district">
+        <field name="name">Villa Maria del Triunfo</field>
+    </record>
+
+    <record id="l10n_pe.district_pe_150713" model="l10n_pe.res.city.district">
+        <field name="name">Mariatana</field>
+    </record>
+
+    <record id="l10n_pe.district_pe_150810" model="l10n_pe.res.city.district">
+        <field name="name">Santa Maria</field>
+    </record>
+
+    <record id="l10n_pe.district_pe_160504" model="l10n_pe.res.city.district">
+        <field name="name">Emilio San Martin</field>
+    </record>
+
+    <record id="l10n_pe.district_pe_190108" model="l10n_pe.res.city.district">
+        <field name="name">San Francisco de Asis de Yarusyacan</field>
+    </record>
+
+    <record id="l10n_pe.district_pe_190109" model="l10n_pe.res.city.district">
+        <field name="name">Simon Bolivar</field>
+    </record>
+
+    <record id="l10n_pe.district_pe_220303" model="l10n_pe.res.city.district">
+        <field name="name">San Martin</field>
+    </record>
+
+    <record id="l10n_pe.district_pe_220601" model="l10n_pe.res.city.district">
+        <field name="name">Juanjui</field>
+    </record>
+
+    <record id="l10n_pe.district_pe_220801" model="l10n_pe.res.city.district">
+        <field name="name">Rioja</field>
+    </record>
+
+    <record id="l10n_pe.district_pe_230110" model="l10n_pe.res.city.district">
+        <field name="name">Coronel Gregorio Albarracin Lanchipa</field>
+    </record>
+
+    <record id="l10n_pe.district_pe_230402" model="l10n_pe.res.city.district">
+        <field name="name">Heroes Albarracin</field>
+    </record>
+
+    <record id="l10n_pe.district_pe_010102" model="l10n_pe.res.city.district">
+        <field name="name">Asuncion</field>
+    </record>
+
+    <record id="l10n_pe.district_pe_010516" model="l10n_pe.res.city.district">
+        <field name="name">San Cristobal</field>
+    </record>
+
+    <record id="l10n_pe.district_pe_010518" model="l10n_pe.res.city.district">
+        <field name="name">San Jeronimo</field>
+    </record>
+
+    <record id="l10n_pe.district_pe_021408" model="l10n_pe.res.city.district">
+        <field name="name">San Cristobal de Rajan</field>
+    </record>
+
+    <record id="l10n_pe.district_pe_030213" model="l10n_pe.res.city.district">
+        <field name="name">San Jeronimo</field>
+    </record>
+
+    <record id="l10n_pe.district_pe_040305" model="l10n_pe.res.city.district">
+        <field name="name">Bella Union</field>
+    </record>
+
+    <record id="l10n_pe.district_pe_040706" model="l10n_pe.res.city.district">
+        <field name="name">Punta de Bombon</field>
+    </record>
+
+    <record id="l10n_pe.district_pe_050615" model="l10n_pe.res.city.district">
+        <field name="name">San Cristobal</field>
+    </record>
+
+    <record id="l10n_pe.district_pe_051104" model="l10n_pe.res.city.district">
+        <field name="name">Concepcion</field>
+    </record>
+
+    <record id="l10n_pe.district_pe_060102" model="l10n_pe.res.city.district">
+        <field name="name">Asuncion</field>
+    </record>
+
+    <record id="l10n_pe.district_pe_061113" model="l10n_pe.res.city.district">
+        <field name="name">Union Agua Blanca</field>
+    </record>
+
+    <record id="l10n_pe.district_pe_080104" model="l10n_pe.res.city.district">
+        <field name="name">San Jeronimo</field>
+    </record>
+
+    <record id="l10n_pe.district_pe_090118" model="l10n_pe.res.city.district">
+        <field name="name">Ascension</field>
+    </record>
+
+    <record id="l10n_pe.district_pe_090603" model="l10n_pe.res.city.district">
+        <field name="name">Cordova</field>
+    </record>
+
+    <record id="l10n_pe.district_pe_100301" model="l10n_pe.res.city.district">
+        <field name="name">La Union</field>
+    </record>
+
+    <record id="l10n_pe.district_pe_100507" model="l10n_pe.res.city.district">
+        <field name="name">Monzon</field>
+    </record>
+
+    <record id="l10n_pe.district_pe_120130" model="l10n_pe.res.city.district">
+        <field name="name">San Jeronimo de Tunan</field>
+    </record>
+
+    <record id="l10n_pe.district_pe_120201" model="l10n_pe.res.city.district">
+        <field name="name">Concepcion</field>
+    </record>
+
+    <record id="l10n_pe.district_pe_120305" model="l10n_pe.res.city.district">
+        <field name="name">San Ramon</field>
+    </record>
+
+    <record id="l10n_pe.district_pe_120705" model="l10n_pe.res.city.district">
+        <field name="name">La Union</field>
+    </record>
+
+    <record id="l10n_pe.district_pe_150102" model="l10n_pe.res.city.district">
+        <field name="name">Ancon</field>
+    </record>
+
+    <record id="l10n_pe.district_pe_160211" model="l10n_pe.res.city.district">
+        <field name="name">Teniente Cesar Lopez Rojas</field>
+    </record>
+
+    <record id="l10n_pe.district_pe_160401" model="l10n_pe.res.city.district">
+        <field name="name">Ramon Castilla</field>
+    </record>
+
+    <record id="l10n_pe.district_pe_180105" model="l10n_pe.res.city.district">
+        <field name="name">San Cristobal</field>
+    </record>
+
+    <record id="l10n_pe.district_pe_190308" model="l10n_pe.res.city.district">
+        <field name="name">Constitucion</field>
+    </record>
+
+    <record id="l10n_pe.district_pe_200110" model="l10n_pe.res.city.district">
+        <field name="name">La Union</field>
+    </record>
+
+    <record id="l10n_pe.district_pe_200802" model="l10n_pe.res.city.district">
+        <field name="name">Bellavista de la Union</field>
+    </record>
+
+    <record id="l10n_pe.district_pe_220403" model="l10n_pe.res.city.district">
+        <field name="name">El Eslabon</field>
+    </record>
+
+    <record id="l10n_pe.district_pe_220706" model="l10n_pe.res.city.district">
+        <field name="name">San Cristobal</field>
+    </record>
+
+    <record id="l10n_pe.district_pe_220707" model="l10n_pe.res.city.district">
+        <field name="name">San Hilarion</field>
+    </record>
+
+    <record id="l10n_pe.district_pe_050115" model="l10n_pe.res.city.district">
+        <field name="name">Jesus Nazareno</field>
+    </record>
+
+    <record id="l10n_pe.district_pe_060106" model="l10n_pe.res.city.district">
+        <field name="name">Jesus</field>
+    </record>
+
+    <record id="l10n_pe.district_pe_070107" model="l10n_pe.res.city.district">
+        <field name="name">Mi Peru</field>
+    </record>
+
+    <record id="l10n_pe.district_pe_101001" model="l10n_pe.res.city.district">
+        <field name="name">Jesus</field>
+    </record>
+
+    <record id="l10n_pe.district_pe_190306" model="l10n_pe.res.city.district">
+        <field name="name">Puerto Bermudez</field>
+    </record>
+</odoo>

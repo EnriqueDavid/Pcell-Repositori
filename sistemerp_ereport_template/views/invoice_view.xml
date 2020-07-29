@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <!-- Inherited Customer For add Reporting Field -->
+        <!-- <record id="view_report_company_invoice_customer_template" model="ir.ui.view">
+            <field name="name">account.invoice.customer.form.inherit</field>
+            <field name="inherit_id" ref="account.view_move_form"/>
+            <field name="model">account.move</field>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='journal_id']" position="after">
+                    <field invisible="1" name="report_template_id1" attrs="{'invisible': [('type', 'not in', ('out_invoice', 'out_refund', 'in_invoice', 'in_refund', 'out_receipt', 'in_receipt'))]}"/>
+                    <field domain="[('report_name', 'ilike', '%invoice_template%')]" name="report_template_id" options="{'no_create': True}" widget="selection" attrs="{'invisible': [('type', 'not in', ('out_invoice', 'out_refund', 'in_invoice', 'in_refund', 'out_receipt', 'in_receipt'))]}"/>
+                </xpath>
+            </field>
+        </record> 
+
+        DE AQUI ABAJO COMENTADO POR FREDDY, DEBIDO A UNA INCOMPATIBILIDAD AL ACTUALIZAR EL MODULO DE REPORTES-->
+        <record id="view_report_company_invoice_supplier_template" model="ir.ui.view">
+            <field name="name">account.invoice.supplier.form.inherit</field>
+            <field name="inherit_id" ref="account.view_move_form"/>
+            <field name="model">account.move</field>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='date']" position="after">
+                    <field domain="[('report_name', 'ilike', '%invoice_template%')]" name="report_template_id" options="{'no_create': True}" />
+                    <field invisible="1" name="report_template_id1" widget="selection" />
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>

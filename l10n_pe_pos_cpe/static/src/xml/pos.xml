@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates id="template" xml:space="preserve">
+
+    <t t-extend="OrderReceipt">
+        <t t-jquery='t[t-esc="order.get_number()"]' t-operation="before">
+            <t t-if="order.get_cpe_type()">
+                <t t-if="order.get_cpe_type()=='01'">Factura </t>
+                <t t-if="order.get_cpe_type()=='03'">Boleta de Venta Electronica</t><br/>
+            </t>
+        </t>
+        <t t-jquery='.pos-receipt-order-data' t-operation="inner">
+            <div style="text-align:center">
+                <t t-if="order.get_cpe_type()">
+                    <br />
+                    <div class="qr-code" id="qr-code" style="display: flex; justify-content: center;"></div>
+                    <br />
+                    <b class="doc-sunat">Representación impresa de,
+                    <t t-if="order.get_cpe_type()=='01'">Factura </t>
+                    <t t-if="order.get_cpe_type()=='03'">Boleta de Venta </t>Electronica consulte en <t t-esc="widget.pos.company.website || ''"/> </b>
+                </t>
+            </div>
+        </t>
+    </t>
+
+</templates>

@@ -1,0 +1,224 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* pos_reports
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 11.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-12-31 07:24+0000\n"
+"PO-Revision-Date: 2018-12-31 02:32-0500\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: \n"
+"Language: es_PE\n"
+"X-Generator: Poedit 2.0.6\n"
+
+#. module: pos_reports
+#: model:ir.ui.view,arch_db:pos_reports.pos_session_report_template
+msgid "<b>Cash</b>"
+msgstr "<b>Efectivo</b>"
+
+#. module: pos_reports
+#: model:ir.ui.view,arch_db:pos_reports.pos_session_report_template
+msgid "<b>Credit</b>"
+msgstr "<b>Banco</b>"
+
+#. module: pos_reports
+#: model:ir.ui.view,arch_db:pos_reports.pos_order_report_template
+#: model:ir.ui.view,arch_db:pos_reports.pos_session_report_template
+msgid "<strong>Closing Date:</strong>"
+msgstr "<strong>Fecha de cierre:</strong>"
+
+#. module: pos_reports
+#: model:ir.ui.view,arch_db:pos_reports.pos_order_report_template
+#: model:ir.ui.view,arch_db:pos_reports.pos_session_report_template
+msgid "<strong>Manager</strong>"
+msgstr "<strong>Administrador</strong>"
+
+#. module: pos_reports
+#: model:ir.ui.view,arch_db:pos_reports.pos_order_report_template
+#: model:ir.ui.view,arch_db:pos_reports.pos_session_report_template
+msgid "<strong>Opening Date:</strong>"
+msgstr "<strong>Fecha de apertura:</strong>"
+
+#. module: pos_reports
+#: model:ir.ui.view,arch_db:pos_reports.pos_order_report_template
+#: model:ir.ui.view,arch_db:pos_reports.pos_session_report_template
+msgid "<strong>Point Of Sale:</strong>"
+msgstr "<strong>Punto de Venta:</strong>"
+
+#. module: pos_reports
+#: model:ir.ui.view,arch_db:pos_reports.pos_order_report_template
+#: model:ir.ui.view,arch_db:pos_reports.pos_session_report_template
+msgid "<strong>Responsible Person:</strong>"
+msgstr "<strong>Persona Responsable:</strong>"
+
+#. module: pos_reports
+#: model:ir.ui.view,arch_db:pos_reports.pos_order_report_template
+#: model:ir.ui.view,arch_db:pos_reports.pos_session_report_template
+msgid "<strong>Salesperson</strong>"
+msgstr "<strong>Vendedor</strong>"
+
+#. module: pos_reports
+#: model:ir.ui.view,arch_db:pos_reports.pos_order_report_template
+msgid "<strong>Total</strong>"
+msgstr "<strong>Total</strong>"
+
+#. module: pos_reports
+#: model:ir.ui.view,arch_db:pos_reports.pos_session_report_template
+msgid "Amount"
+msgstr "Importe"
+
+#. module: pos_reports
+#: model:ir.ui.view,arch_db:pos_reports.pos_order_report_template
+msgid "Amount Tax"
+msgstr "Importe de impuestos"
+
+#. module: pos_reports
+#: model:ir.ui.view,arch_db:pos_reports.pos_session_report_template
+msgid "Currency"
+msgstr "Moneda"
+
+#. module: pos_reports
+#: model:ir.ui.view,arch_db:pos_reports.pos_session_report_template
+msgid "Customer"
+msgstr "Cliente"
+
+#. module: pos_reports
+#: model:ir.ui.view,arch_db:pos_reports.pos_order_report_template
+msgid "Date"
+msgstr "Fecha"
+
+#. module: pos_reports
+#: model:ir.ui.view,arch_db:pos_reports.pos_session_report_template
+msgid "Difference"
+msgstr "Diferencia"
+
+#. module: pos_reports
+#: model:ir.ui.view,arch_db:pos_reports.pos_session_report_template
+msgid "Ending Balance"
+msgstr "Balance final"
+
+#. module: pos_reports
+#: model:ir.ui.view,arch_db:pos_reports.pos_order_report_template
+msgid "Invoice"
+msgstr "Factura"
+
+#. module: pos_reports
+#: model:ir.ui.view,arch_db:pos_reports.pos_session_report_template
+msgid "Journal"
+msgstr "Diario"
+
+#. module: pos_reports
+#: model:ir.ui.view,arch_db:pos_reports.pos_session_report_template
+msgid "Label"
+msgstr "Descripción"
+
+#. module: pos_reports
+#: model:ir.ui.view,arch_db:pos_reports.pos_session_report_template
+msgid "Order Date"
+msgstr "Fecha de Pedido"
+
+#. module: pos_reports
+#: model:ir.ui.view,arch_db:pos_reports.pos_session_report_template
+msgid "Order Reference"
+msgstr "Referencia del pedido"
+
+#. module: pos_reports
+#: model:ir.actions.report,name:pos_reports.pos_order_report
+msgid "Order Summary Report"
+msgstr "Informe de resumen de pedidos"
+
+#. module: pos_reports
+#: model:ir.ui.view,arch_db:pos_reports.pos_order_report_template
+msgid "Others"
+msgstr "Otros(Anulados)"
+
+#. module: pos_reports
+#: model:ir.ui.view,arch_db:pos_reports.pos_order_report_template
+msgid "Partner"
+msgstr "Socio"
+
+#. module: pos_reports
+#: model:ir.ui.view,arch_db:pos_reports.pos_order_report_template
+#: model:ir.ui.view,arch_db:pos_reports.pos_session_report_template
+msgid "Reference"
+msgstr "Referencia"
+
+#. module: pos_reports
+#: code:addons/pos_reports/reports/report_pos_session_xlsx.py:28
+#: code:addons/pos_reports/reports/report_pos_session_xlsx.py:31
+#, python-format
+msgid "Responsible Person:"
+msgstr "Persona Responsable:"
+
+#. module: pos_reports
+#: model:ir.ui.view,arch_db:pos_reports.pos_order_report_template
+msgid "Salesperson"
+msgstr "Vendedor"
+
+#. module: pos_reports
+#: code:addons/pos_reports/reports/report_pos_session_xlsx.py:17
+#, python-format
+msgid "Session Report"
+msgstr "Informe de sesion"
+
+#. module: pos_reports
+#: model:ir.actions.report,name:pos_reports.pos_session_report
+msgid "Session Summary Report"
+msgstr "Informe de Resumen de Sesión"
+
+#. module: pos_reports
+#: model:ir.ui.view,arch_db:pos_reports.pos_session_report_template
+msgid "Starting Balance"
+msgstr "Saldo inicial"
+
+#. module: pos_reports
+#: model:ir.ui.view,arch_db:pos_reports.pos_session_report_template
+msgid "Status"
+msgstr "Estado"
+
+#. module: pos_reports
+#: model:ir.ui.view,arch_db:pos_reports.pos_session_report_template
+msgid "Subtotal:"
+msgstr "Subtotal:"
+
+#. module: pos_reports
+#: model:ir.ui.view,arch_db:pos_reports.pos_order_report_template
+msgid "Summary By Orders"
+msgstr "Resumen por Pedidos"
+
+#. module: pos_reports
+#: model:ir.ui.view,arch_db:pos_reports.pos_session_report_template
+msgid "Summary By Payment Methods"
+msgstr "Resumen por Métodos de Pago"
+
+#. module: pos_reports
+#: model:ir.ui.view,arch_db:pos_reports.pos_session_report_template
+msgid "Summary By Statements"
+msgstr "Resumen por Declaraciones"
+
+#. module: pos_reports
+#: code:addons/pos_reports/reports/report_pos_session_xlsx.py:16
+#, python-format
+msgid "The report of multiple sessions can not be made"
+msgstr "No se puede hacer el informe de sesiones múltiples."
+
+#. module: pos_reports
+#: model:ir.ui.view,arch_db:pos_reports.pos_order_report_template
+msgid "Total"
+msgstr "Total"
+
+#. module: pos_reports
+#: model:ir.ui.view,arch_db:pos_reports.pos_session_report_template
+msgid "Transactions Subtotal"
+msgstr "Subtotal Transacciones"
+
+#. module: pos_reports
+#: model:ir.ui.view,arch_db:pos_reports.pos_order_report_template
+msgid "User"
+msgstr "Usuario"

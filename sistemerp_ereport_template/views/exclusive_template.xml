@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <template id="exclusive_external_layout">
+            <!-- Multicompany -->
+            <t t-if="o and 'company_id' in o">
+                <t t-set="company" t-value="o.company_id"/>
+            </t>
+            <t t-if="not o or not 'company_id' in o">
+                <t t-set="company" t-value="res_company"/>
+            </t>
+            <t t-call="sistemerp_ereport_template.exclusive_header"/>
+            <div class="article o_report_layout_standard" t-att-data-oe-model="o and o._name" t-att-data-oe-id="o and o.id">
+                <t t-raw="0"/>
+            </div>
+            <t t-call="sistemerp_ereport_template.template_footer"/>
+        </template>
+        <template id="exclusive_header">
+            <div class="header" t-att-style="'font-family:'+o.company_id.font_id.family+';font-size:'+str(o.company_id.font_size)+'px;'">
+                <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                    <tbody>
+                        <tr>
+                            <td>
+                                <center>
+                                    <table border="0" cellpadding="0" cellspacing="0" style="padding:0px 20px 0px 20px; margin:0; background:#fff; line-height:20px;" width="100%">
+                                        <tr>
+                                            <td align="left" colspan="2" t-attf-style="color:#{text_color or '#ffffff'}; padding:0 0px;" valign="top">
+                                                <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                                                    <tr>
+                                                        <td align="left" style="color:#4D4D4F; padding: 0px 15px; border-right: 1px solid #D4D1D1;" valign="middle">
+                                                            <img style="max-height: 80px; margin-top: 10%;" t-att-src="'data:image/png;base64,%s' % to_text(o.company_id.invoice_logo) or to_text(o.company_id.logo)" t-if="o.company_id.logo"/>
+                                                        </td>
+                                                        <td style="padding:10px 0 10px 10px; width:50%; line-height:18px;" valign="top">
+                                                            <p t-attf-style="text-transform:capitalize; color:#{theme_color or '#ffffff'}; font-weight:bold; margin:0; margin-bottom:5px;">Address</p>
+                                                            <t t-call="sistemerp_ereport_template.templates_company_details"/>
+                                                            <span>RUC:
+                                                                <span t-esc="o.company_id.vat"/>
+                                                            </span>
+                                                        </td>
+                                                        <td align="left" style="padding:0px 0px 0px 15px; width:50%; line-height:18px;" valign="top">
+                                                            <span t-attf-style="text-transform:capitalize; color: #{theme_color or '#ffffff'}; font-weight:bold; margin:0; margin-bottom:5px;">
+                                                                <span t-if="o.type == 'out_invoice' and (o.state == 'open' or o.state == 'posted')">Invoice To:</span>
+                                                                <span t-if="o.type == 'out_invoice' and o.state == 'proforma2'">PRO-FORMA To:</span>
+                                                                <span t-if="o.type == 'out_invoice' and o.state == 'draft'">Draft Invoice To:</span>
+                                                                <span t-if="o.type == 'out_invoice' and o.state == 'cancel'">Cancelled Invoice To:</span>
+                                                                <span t-if="o.type == 'out_refund'">Refund To:</span>
+                                                                <span t-if="o.type == 'in_refund'">Vendor Refund To:</span>
+                                                                <span t-if="o.type == 'in_invoice'">Vendor Bill To:</span>
+                                                            </span>
+                                                            <t t-call="sistemerp_ereport_template.invoice_templates_customer_details"/>
+                                                            <t t-call="sistemerp_ereport_template.invoice_templates_customer_shipping_details"/>
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td colspan="3" style="height:5px;"/>
+                                        </tr>
+                                    </table>
+                                </center>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </template>
+        <template id="report_invoice_exclusive_main">
+            <t t-call="sistemerp_ereport_template.exclusive_external_layout">
+                <t t-set="o" t-value="o.with_context({'lang':o.partner_id.lang})"/>
+                <t t-set="theme_color" t-value="o.company_id and o.company_id.theme_color"/>
+                <t t-set="theme_text_color" t-value="o.company_id and o.company_id.theme_text_color"/>
+                <t t-set="company_color" t-value="o.company_id and o.company_id.company_color"/>
+                <t t-set="company_address_color" t-value="o.company_id and o.company_id.company_address_color"/>
+                <t t-set="customer_color" t-value="o.company_id and o.company_id.customer_color"/>
+                <t t-set="customer_address_color" t-value="o.company_id and o.company_id.customer_address_color"/>
+                <t t-set="text_color" t-value="o.company_id and o.company_id.text_color"/>
+                <div class="page" t-att-style="'font-family:'+o.company_id.font_id.family+';font-size:'+str(o.company_id.font_size)+'px;'">
+                    <t t-call="sistemerp_ereport_template.template_watermark"/>
+                    <div class="oe_structure"/>
+                    <div>
+                        <div style="padding:0px 20px 20px 20px; margin:0; background:#fff; text-transform:uppercase;" width="100%">
+                            <div>
+                                <div colspan="3" t-attf-style="padding:95px 0px 0px 0px; height:5px; border-bottom: 1px solid #{theme_color or '#000000'};"/>
+                            </div>
+                            <div align="left" style="color:#4D4D4F; padding:10px 0px 0px 0px;" valign="top">
+                                <table border="0" cellpadding="0" cellspacing="0" t-attf-style="color:#fff; text-transform:capitalize; border: 1px solid #{theme_color or '#000000'};" width="100%">
+                                    <tr t-attf-style="color: #{theme_text_color or '#000000'}; background-color: #{theme_color or '#000000'};">
+                                        <!-- <td style="padding:9px 15px; font-weight:bold;">
+                                            <h6>
+                                                <span t-field="o.pe_doc_name" /><br/>
+                                                                 <span t-field="o.name"/>
+
+                                                
+                                                <b t-if="o.type == 'out_invoice' and o.state == 'proforma2'">PRO-FORMA No:</b>
+                                                <b t-if="o.type == 'out_invoice' and o.state == 'draft'">Draft Invoice</b>
+                                                <b t-if="o.type == 'out_invoice' and o.state == 'cancel'">Cancelled Invoice No:</b>
+                                                <b t-if="o.type == 'out_refund'">Refund No:</b>
+                                                <b t-if="o.type == 'in_refund'">Vendor Refund No:</b>
+                                                <b t-if="o.type == 'in_invoice'">Vendor Bill No:</b>
+                                                <br/>
+                                            </h6>
+                                            <span t-field="o.name"/>
+                                        </td> -->
+                                        <td style="padding:5px 15px;">
+                                            <b><span t-field="o.pe_doc_name"/></b>
+                                            <br/>
+                                             <span t-field="o.name"/>
+                                        </td>
+                                        <td style="padding:5px 15px;">
+                                            <b>Invoice Date:</b>
+                                            <br/>
+                                            <span t-esc="o._get_invoice_date()"/>
+                                        </td>
+                                        <td style="padding:5px 15px;">
+                                            <b>Description:</b>
+                                            <br/>
+                                            <span t-field="o.name"/>
+                                        </td>
+                                        <td style="padding:5px 15px;">
+                                            <b>
+                                                <span t-if="o.type in ('out_invoice','out_refund')">SO:</span>
+                                                <span t-if="o.type in ('in_invoice', 'in_refund')">PO:</span>
+                                            </b>
+                                            <br/>
+                                            <span t-field="o.invoice_origin"/>
+                                        </td>
+                                        <td style="padding:5px 15px;">
+                                            <b>Order Date:</b>
+                                            <br/>
+                                            <span t-esc="o._get_origin_date(o.invoice_origin)"/>
+                                        </td>
+                                        <td style="padding:5px 15px;">
+                                            <b>Due Date:</b>
+                                            <br/>
+                                            <span t-esc="o._get_invoice_due_date()"/>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+                            <div style="padding:20px 0px 0 0; font-weight:bold; width:100%;" >
+                                <t t-call="sistemerp_ereport_template.report_invoice_order_lines"/>
+                            </div>
+                             <div class="pull-left" style="color: #{text_color or '#000000'}; padding-top:5px; width: 100%;">
+                            <t t-call="sistemerp_ereport_template.report_invoice_notes"/><br/>
+                        </div>
+
+                        <div style="background:#fff; line-height:1; border-bottom:1px solid #{'#959595'}" width="100%">
+                            <div style="width: 45%; float: left;">
+                                <p><t t-call="sistemerp_ereport_template.template_total_amount_word"/>
+                                </p>
+                                <p t-if="o.is_cpe" ><strong>Summary: </strong> <br />
+                                    <span t-field="o.pe_digest"/>
+                                </p>
+                                <t t-foreach="o.pe_additional_property_ids.filtered(lambda val: val.code != '1000')" t-as="p">
+                                  <span t-field="p.value"/><br />
+                                </t>
+                                Representacion impresa de: 
+                                <span t-field="o.pe_doc_name"/>, consulte en
+                                <span t-field="o.company_id.website"/>
+                            </div>
+
+                            <div style="width: 20%; float: left;">
+                                <t t-call="sistemerp_ereport_template.report_invoice_barcode"/>
+                            </div>
+                            
+                            <div style="width: 35%; float: right;">
+                                <t t-call="sistemerp_ereport_template.invoice_subtotal_tem" />
+                                <div t-if="not o._get_reconciled_info_JSON_values()" style="width: 100%; text-align:right;">
+                                   <p t-att-style="'font-weight:bold; color:#000;  color: %s;' % (text_color) ">
+                                        Payment Status: Pending
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                            <div align="right"  style="color: #{text_color or '#000000'};">
+                                <t t-call="sistemerp_ereport_template.report_invoice_signature"/>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="oe_structure"/>
+                </div>
+            </t>
+        </template>
+        <template id="report_invoice_template_custom_exclusive">
+            <t t-call="web.html_container">
+                <t t-as="o" t-foreach="docs">
+                    <t t-call="sistemerp_ereport_template.report_invoice_exclusive_main" t-lang="o.partner_id.lang"/>
+                </t>
+            </t>
+        </template>
+        <template id="report_invoice_exclusive_main_duplicate" inherit_id="sistemerp_ereport_template.report_invoice_exclusive_main" primary="True">
+            <xpath expr="//div[@t-if='not o._get_reconciled_info_JSON_values()'] " position="before">
+                <t t-call="sistemerp_ereport_template.report_invoice_payment_move_line"/>
+            </xpath>
+        </template>
+    </data>
+</odoo>

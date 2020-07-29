@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+	<template id="pos_journal_sequence_assets_backend" inherit_id="point_of_sale.assets" name="pos_journal_sequence_assets_backend">
+		<xpath expr="." position="inside">
+			<script type="text/javascript" src="/pos_journal_sequence/static/src/lib/String.js"></script>
+			<script src="/pos_journal_sequence/static/src/js/pos_journal_sequence.js" type="text/javascript" />
+		</xpath>
+	</template>
+</odoo>

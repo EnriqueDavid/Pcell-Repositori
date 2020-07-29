@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+	<template id="report_delivery_document" inherit_id="stock.report_delivery_document">
+		<xpath expr="//div[@name='div_sched_date']" position="after">
+			<div t-if="o.pe_invoice_name" class="col-auto" name="div_origin">
+				<strong>Invoice:</strong>
+				<p t-field="o.pe_invoice_name" />
+			</div>
+		</xpath>
+
+		<!-- <xpath expr="//td[@name='td_sched_date']" position="after">
+			<td t-if="o.pe_invoice_name">
+                <span t-field="o.pe_invoice_name"/>
+            </td>
+		</xpath> -->
+
+		<!-- <xpath expr="//td[@name='lot_qty']" position="after">
+			<td t-if="move_line.lot_id.life_date" class="text-right">
+                FV. <span t-field="move_line.lot_id.life_date" t-field-options='{"format": "dd/MM/yyyy"}'/>
+            </td>
+		</xpath> -->
+
+	</template>
+
+</odoo>

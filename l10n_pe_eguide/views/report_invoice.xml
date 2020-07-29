@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <template id="report_invoice_document" inherit_id="account.report_invoice_document">
+        <xpath expr="//div[@name='reference']" position="after">
+            <div class="col-xs-2" t-if="o.guide_number">
+                <strong>Referral Guide:</strong>
+                <p t-field="o.guide_number" />
+            </div>
+            <div class="col-xs-2" t-if="o.pe_stock_name">
+                <strong>Internal Guide:</strong>
+                <p t-field="o.pe_stock_name" />
+            </div>
+        </xpath>
+    </template>
+    <!-- <tr t-if="o.pe_stock_name">
+                <td style="padding:5px 15px;">
+                    <b>Guia Interna:</b>
+                </td>
+                <td style="text-align:right; padding:5px 15px;">
+                    <span t-field="o.pe_stock_name" />
+                </td>
+            </tr> -->
+    <template id="report_invoice_document_advance" inherit_id="sistemerp_ereport_template.report_invoice_advanced_main">
+        <xpath expr="//table/tr[6]" position="after">
+            <t t-if="o.type == 'out_invoice'">
+                <tr t-if="o.guide_number">
+                    <td style="padding:5px 15px;">
+                        <b>Guia de Remisión:</b>
+                    </td>
+                    <td style="text-align:right; padding:1px 12px 3px 1px;">
+                        <span t-field="o.guide_number" />
+                    </td>
+                </tr>
+            </t>
+        </xpath>
+    </template>
+    <template id="report_invoice_document_incredible" inherit_id="sistemerp_ereport_template.report_invoice_incredible_main">
+        <xpath expr="//table/tr[last()]" position="inside">
+            <t t-if="o.type == 'out_invoice'">
+                <tr t-if="o.guide_number" t-attf-style="color: #{text_color or '#000000'};">
+                    <td style="padding: 10px 0;border-top: 1px solid #999;">
+                        <b>Guia de Remisión:</b>
+                    </td>
+                    <td style="border-top: 1px solid #999; padding: 5px 12px;">
+                        <span t-field="o.guide_number"/>
+                    </td>
+                </tr>
+            </t>
+        </xpath>
+    </template>
+    <template id="report_invoice_document_creative" inherit_id="sistemerp_ereport_template.report_invoice_creative_main">
+        <xpath expr="//table/tr[8]" position="after">
+            <t t-if="o.type == 'out_invoice'">
+                <tr t-if="o.guide_number"  t-attf-style="color: #{text_color or '#000000'};">
+                    <td style="padding:5px 15px;">
+                        <b>Guia de Remisión:</b>
+                    </td>
+                    <td style="text-align:right; padding:5px 15px;">
+                        <span t-field="o.guide_number" />
+                    </td>
+                </tr>
+            </t>
+        </xpath>
+    </template>
+
+</odoo>

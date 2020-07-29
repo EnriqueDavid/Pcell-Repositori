@@ -1,0 +1,149 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* l10n_pe_invoice
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 13.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-04-10 01:32+0000\n"
+"PO-Revision-Date: 2020-04-09 20:36-0500\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: \n"
+"Language: es\n"
+"X-Generator: Poedit 2.3\n"
+
+#. module: l10n_pe_invoice
+#: model:ir.model.fields,field_description:l10n_pe_invoice.field_res_company__sunat_amount
+msgid "Amount"
+msgstr "Cantidad"
+
+#. module: l10n_pe_invoice
+#: model:ir.model.fields,field_description:l10n_pe_invoice.field_account_move_line__amount_discount
+msgid "Amount Discount"
+msgstr "Importe de descuento"
+
+#. module: l10n_pe_invoice
+#: model_terms:ir.ui.view,arch_db:l10n_pe_invoice.view_account_invoice_refund_dn
+msgid "Cancel"
+msgstr "Cancelar"
+
+#. module: l10n_pe_invoice
+#: model:ir.model,name:l10n_pe_invoice.model_res_company
+msgid "Companies"
+msgstr "Compañias"
+
+#. module: l10n_pe_invoice
+#: model_terms:ir.ui.view,arch_db:l10n_pe_invoice.view_account_invoice_refund_dn
+msgid "Create Debit Note"
+msgstr "Crear nota de débito"
+
+#. module: l10n_pe_invoice
+#: model:ir.model.fields,field_description:l10n_pe_invoice.field_account_journal__credit_note_id
+msgid "Credit Note"
+msgstr "Factura rectificativa"
+
+#. module: l10n_pe_invoice
+#: model:ir.model,name:l10n_pe_invoice.model_res_currency
+msgid "Currency"
+msgstr "Moneda"
+
+#. module: l10n_pe_invoice
+#: model:ir.model.fields,field_description:l10n_pe_invoice.field_res_currency__pe_currency_code
+msgid "Currrency Code"
+msgstr "Código de moneda"
+
+#. module: l10n_pe_invoice
+#: model:ir.model.fields,field_description:l10n_pe_invoice.field_account_journal__dedit_note_id
+#: model_terms:ir.ui.view,arch_db:l10n_pe_invoice.view_account_invoice_refund_dn
+msgid "Debit Note"
+msgstr "Nota de Debito"
+
+#. module: l10n_pe_invoice
+#: model:ir.model.fields,field_description:l10n_pe_invoice.field_account_move__internal_number
+msgid "Internal Number"
+msgstr "Número interno"
+
+#. module: l10n_pe_invoice
+#: model:ir.actions.act_window,name:l10n_pe_invoice.action_account_invoice_refund_debit
+msgid "Invoice"
+msgstr "Factura"
+
+#. module: l10n_pe_invoice
+#: model:ir.model.fields,field_description:l10n_pe_invoice.field_account_journal__pe_invoice_code
+msgid "Invoice Type Code"
+msgstr "Código del Documento"
+
+#. module: l10n_pe_invoice
+#: model:ir.model.fields,field_description:l10n_pe_invoice.field_account_move__debit_invoice_id
+msgid "Invoice for which this invoice is the debit"
+msgstr "Factura para la cual esta factura es el débito"
+
+#. module: l10n_pe_invoice
+#: model:ir.model.fields,field_description:l10n_pe_invoice.field_account_move_line__pe_invoice_id
+msgid "Invoices"
+msgstr "Facturas"
+
+#. module: l10n_pe_invoice
+#: model:ir.model.fields,field_description:l10n_pe_invoice.field_account_move_line__pe_invoice_ids
+msgid "Invoices lines"
+msgstr "Lineas de facturas"
+
+#. module: l10n_pe_invoice
+#: model:ir.model,name:l10n_pe_invoice.model_account_journal
+msgid "Journal"
+msgstr "Diario"
+
+#. module: l10n_pe_invoice
+#: model:ir.model,name:l10n_pe_invoice.model_account_move
+msgid "Journal Entries"
+msgstr "Asientos contables"
+
+#. module: l10n_pe_invoice
+#: model:ir.model,name:l10n_pe_invoice.model_account_move_line
+msgid "Journal Item"
+msgstr "Apunte contable"
+
+#. module: l10n_pe_invoice
+#: model:res.groups,name:l10n_pe_invoice.group_multi_related_invoice
+msgid "Multi Related Invoice"
+msgstr "Factura relacionada múltiple"
+
+#. module: l10n_pe_invoice
+#: model:ir.model.fields,field_description:l10n_pe_invoice.field_account_journal__pe_payment_method
+msgid "Payment Method"
+msgstr "Método de pago"
+
+#. module: l10n_pe_invoice
+#: model_terms:ir.ui.view,arch_db:l10n_pe_invoice.view_company_form
+msgid "Peruvian Localization"
+msgstr "Localización peruana"
+
+#. module: l10n_pe_invoice
+#: model_terms:ir.ui.view,arch_db:l10n_pe_invoice.view_account_journal_form
+msgid "Peruvian Settings"
+msgstr "Configuración Peruana"
+
+#. module: l10n_pe_invoice
+#: model:ir.model,name:l10n_pe_invoice.model_uom_uom
+msgid "Product Unit of Measure"
+msgstr "Unidad de Medida del Producto"
+
+#. module: l10n_pe_invoice
+#: model:ir.model.fields,field_description:l10n_pe_invoice.field_account_move__pe_related_ids
+msgid "Related Invoices"
+msgstr "Facturas relacionadas"
+
+#. module: l10n_pe_invoice
+#: model:ir.model.fields,field_description:l10n_pe_invoice.field_uom_uom__sunat_code
+msgid "SUNAT Unit Code"
+msgstr "Código de unidad SUNAT"
+
+#. module: l10n_pe_invoice
+#: model:ir.model,name:l10n_pe_invoice.model_sale_advance_payment_inv
+msgid "Sales Advance Payment Invoice"
+msgstr "Ventas. Anticipo pago factura"

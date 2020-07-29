@@ -1,0 +1,103 @@
+<?xml version="1.0" ?>
+<odoo>
+    <record id="l10n_pe.city_pe_0204" model="res.city">
+        <field name="name">Asuncion</field>
+    </record>
+
+    <record id="l10n_pe.city_pe_0511" model="res.city">
+        <field name="name">Vilcas Huaman</field>
+    </record>
+
+    <record id="l10n_pe.city_pe_0605" model="res.city">
+        <field name="name">Contumaza</field>
+    </record>
+
+    <record id="l10n_pe.city_pe_0809" model="res.city">
+        <field name="name">La Convencion</field>
+    </record>
+
+    <record id="l10n_pe.city_pe_0608" model="res.city">
+        <field name="name">Jaen</field>
+    </record>
+
+    <record id="l10n_pe.city_pe_0906" model="res.city">
+        <field name="name">Huaytara</field>
+    </record>
+
+    <record id="l10n_pe.city_pe_1001" model="res.city">
+        <field name="name">Huanuco</field>
+    </record>
+
+    <record id="l10n_pe.city_pe_1007" model="res.city">
+        <field name="name">Marañon</field>
+    </record>
+
+    <record id="l10n_pe.city_pe_1202" model="res.city">
+        <field name="name">Concepcion</field>
+    </record>
+
+    <record id="l10n_pe.city_pe_1304" model="res.city">
+        <field name="name">Chepen</field>
+    </record>
+
+    <record id="l10n_pe.city_pe_1305" model="res.city">
+        <field name="name">Julcan</field>
+    </record>
+
+    <record id="l10n_pe.city_pe_1309" model="res.city">
+        <field name="name">Sanchez Carrión</field>
+    </record>
+
+    <record id="l10n_pe.city_pe_1312" model="res.city">
+        <field name="name">Viru</field>
+    </record>
+
+    <record id="l10n_pe.city_pe_1509" model="res.city">
+        <field name="name">Oyon</field>
+    </record>
+
+    <record id="l10n_pe.city_pe_1604" model="res.city">
+        <field name="name">Mariscal Ramon Castilla</field>
+    </record>
+
+    <record id="l10n_pe.city_pe_1607" model="res.city">
+        <field name="name">Datem del Marañon</field>
+    </record>
+
+    <record id="l10n_pe.city_pe_1802" model="res.city">
+        <field name="name">General Sanchez Cerro</field>
+    </record>
+
+    <record id="l10n_pe.city_pe_1902" model="res.city">
+        <field name="name">Daniel Alcides Carrion</field>
+    </record>
+
+    <record id="l10n_pe.city_pe_2004" model="res.city">
+        <field name="name">Morropon</field>
+    </record>
+
+    <record id="l10n_pe.city_pe_2102" model="res.city">
+        <field name="name">Azangaro</field>
+    </record>
+
+    <record id="l10n_pe.city_pe_2106" model="res.city">
+        <field name="name">Huancane</field>
+    </record>
+
+    <record id="l10n_pe.city_pe_2111" model="res.city">
+        <field name="name">San Roman</field>
+    </record>
+
+    <record id="l10n_pe.city_pe_2206" model="res.city">
+        <field name="name">Mariscal Caceres</field>
+    </record>
+
+    <record id="l10n_pe.city_pe_2209" model="res.city">
+        <field name="name">San Martin</field>
+    </record>
+
+    <record id="l10n_pe.city_pe_2504" model="res.city">
+        <field name="name">Purus</field>
+    </record>
+
+</odoo>

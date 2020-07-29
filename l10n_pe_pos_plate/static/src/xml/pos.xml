@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<templates id="point_of_sale.template" xml:space="preserve">
+	<t t-name="PlateInfoWidget">
+       <div class='modal-dialog'>
+        <div class='popup popup-numbers-input'>
+        		<p class='title'>Plate</p>
+                <div>
+                	<span>Number Plate:</span>
+                	<input class='numb_detail required' name='add_number' type='text'></input>
+            	</div>
+            	
+            	<br/>
+                <div class='footer'>
+                    <div class='button apply_product_number_button'>
+                        OK
+                    </div>
+                    <div class='button cancel'>
+                        Cancel 
+                    </div>
+                </div>
+            </div>
+        </div> 
+	</t>
+	<t t-extend="Orderline">
+	 	<t t-jquery='li' t-operation='replace'>
+	 		<li t-attf-class="orderline #{ line.selected ? 'selected' : '' }">
+            <span class="product-name">
+                <t t-esc="line.get_product().display_name"/>
+                <t t-if="line.get_product().require_plate"><i t-attf-class="oe_link_icon fa fa-pencil-square oe_icon line-product-number #{line.pe_license_plate ? 'oe_green' : 'oe_red' }"/></t>
+                <t t-if="line.get_product().tracking!=='none'">
+                    <i t-attf-class="oe_link_icon fa fa-list oe_icon line-lot-icon #{line.has_valid_product_lot() ? 'oe_green' : 'oe_red' }"/>
+                </t>
+            </span>
+            <span class="price">
+                <t t-esc="widget.format_currency(line.get_display_price())"/>
+            </span>
+            <ul class="info-list">
+                <t t-if="line.get_quantity_str() !== '1' || line.selected ">
+                    <li class="info">
+                        <em>
+                            <t t-esc="line.get_quantity_str()" />
+                        </em>
+                        <t t-esc="line.get_unit().name" />
+                        at
+                        <t t-esc="widget.format_currency(line.get_unit_display_price(),'Product Price')" />
+                        /
+                        <t t-esc="line.get_unit().name" />
+                        <!--/
+                        <t t-if="line.number" >(<t t-esc="line.number" />)</t>-->
+                    </li>
+                </t>
+                <t t-if="line.get_discount_str() !== '0'">
+                    <li class="info">
+                        With a 
+                        <em>
+                            <t t-esc="line.get_discount_str()" />%
+                        </em>
+                        discount
+                    </li>
+                </t>
+            </ul>
+        </li>
+	 	</t>
+    </t>
+	<t t-name="ConfirmPlatePopupWidget">
+        <div class="modal-dialog">
+            <div class="popup popup-number_confirm">
+                <p class="title"><t t-esc=" widget.options.title || 'Confirm ?' " /></p>
+                <p class="body"><t t-esc="  widget.options.body || '' "/></p>
+                <div class="footer">
+                    <div class="button confirm">
+                        Confirm 
+                    </div>
+                    <div class="button cancel">
+                        Cancel 
+                    </div>
+                </div>
+            </div>
+        </div>
+    </t>
+	<t t-extend="PosTicket">
+		<t t-jquery='table[class="receipt-orderlines"]' t-operation='replace'>
+				<table class='receipt-orderlines'>
+                <colgroup>
+                    <col width='50%' />
+                    <col width='25%' />
+                    <col width='25%' />
+                </colgroup>
+                <tr t-foreach="orderlines" t-as="orderline">
+                    <td>
+                        <t t-esc="orderline.get_product().display_name"/>
+                         <t t-if="orderline.pe_license_plate">(<t t-esc="orderline.pe_license_plate"/>)</t>
+                         <t t-if="orderline.get_discount() > 0">
+                            <div class="pos-disc-font">
+                                With a <t t-esc="orderline.get_discount()"/>% discount
+                            </div>
+                        </t>
+                    </td>
+                    <td class="pos-right-align">
+                        <t t-esc="orderline.get_quantity_str_with_unit()"/>
+                    </td>
+                    <td class="pos-right-align">
+                        <t t-esc="widget.format_currency(orderline.get_display_price())"/>
+                    </td>
+                </tr>
+            </table>
+		</t>
+	</t>
+</templates>

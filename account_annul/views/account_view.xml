@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+	<record model="ir.ui.view" id="view_move_form">
+		<field name="name">account.move.form.inherit.annul</field>
+		<field name="model">account.move</field>
+		<field name="inherit_id" ref="account.view_move_form" />
+		<field name="arch" type="xml">
+			<xpath expr="//button[@name='button_cancel']" position="after">
+				<button name="button_annul" class="btn btn-danger" type="object" confirm="Are you sure you want to anull this invoice in the Sunat?" string="Annul Invoice" attrs="{'invisible':['|', ('state', '!=', 'posted'), ('invoice_sent', '=', True), ]}" groups="account.group_account_invoice" />
+
+				<button name="button_annul" type="object" confirm="Are you sure you want to anull this invoice in the Sunat?" string="Annul Invoice" attrs="{'invisible':['|', ('state', '!=', 'posted'), ('invoice_sent', '=', False), ]}" groups="account.group_account_invoice" />
+			</xpath>
+			<xpath expr="//field[@name='currency_id']" position="after">
+				<field name="annul" attrs="{'invisible':[('annul','=',False)]}" />
+			</xpath>
+		</field>
+	</record>
+
+	<record model="ir.ui.view" id="view_invoice_tree">
+		<field name="name">account.invoice.tree.inherit.annul</field>
+		<field name="model">account.move</field>
+		<field name="inherit_id" ref="account.view_invoice_tree" />
+		<field name="arch" type="xml">
+			<xpath expr="//tree" position="attributes">
+				<attribute name="decoration-muted">state in ['cancel','annul']</attribute>
+			</xpath>
+		</field>
+	</record>
+
+	<record model="ir.ui.view" id="view_account_invoice_report_search">
+		<field name="name">account.invoice.report.search.inherit.annul</field>
+		<field name="model">account.invoice.report</field>
+		<field name="inherit_id" ref="account.view_account_invoice_report_search" />
+		<field name="arch" type="xml">
+			<xpath expr="//filter[@name='current']" position="attributes">
+				<attribute name="domain">[('state','not in', ('draft','cancel','annul'))]</attribute>
+			</xpath>
+		</field>
+	</record>
+
+</odoo>
