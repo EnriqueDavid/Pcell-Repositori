@@ -90,7 +90,7 @@ class AccountMove(models.Model):
     pe_export_amount = fields.Monetary(
         "Export Amount", compute="_pe_compute_operations")
     pe_sunat_transaction = fields.Selection(
-        "_get_pe_pe_sunat_transaction", string="SUNAT Transaction",
+        "_get_pe_pe_sunat_transaction", string="SUNAT Transaction", default="01",
         readonly=True, states={'draft': [('readonly', False)]})
     pe_invoice_date = fields.Datetime("Invoice Date Time", copy=False)
     sunat_qr_code = fields.Binary("QR Code", compute="_compute_get_qr_code")
@@ -101,7 +101,7 @@ class AccountMove(models.Model):
     pe_condition_code = fields.Selection(
         "_get_pe_condition_code", "Condition Code", copy=False)
     pe_sunat_transaction51 = fields.Selection(
-        "_get_pe_sunat_transaction51", string="Sunat Transaction Type",
+        "_get_pe_sunat_transaction51", string="Sunat Transaction Type", default="0101",
         readonly=True, states={'draft': [('readonly', False)]})
     pe_total_discount = fields.Float(
         "Total Discount", compute="_compute_discount")
@@ -695,7 +695,7 @@ class AccountInvoiceLine(models.Model):
 
     pe_affectation_code = fields.Selection(
         selection="_get_pe_reason_code",
-        string="Type of affectation",
+        string="Type of affectation", default='10',
         help="Type of affectation to the IGV")
     pe_affectation_code2 = fields.Integer(
         string="Typeafect",
